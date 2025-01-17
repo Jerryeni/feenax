@@ -44,7 +44,7 @@ export function Footer() {
                 className="absolute inset-0"
               >
                 <div className="relative w-full">
-                  <Image src={require("../public/images/Image.svg")} alt="refer" className="w-[90%]" />
+                  <Image src={require("../public/images/Image.svg")} alt="refer" className="animate-bounce duration-50 w-[90%]" />
                   {/* Animated city skyline illustration */}
                   {/* <div className="absolute bottom-0 right-0 w-full h-4/5">
                     <div className="relative w-full h-full">

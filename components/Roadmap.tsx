@@ -38,7 +38,7 @@ export function Roadmap() {
 
   return (
     <section id="roadmap" className="py-20">
-      <div className="max-w-6xl mx-auto px-4">
+      <div className="max-w-6xlx mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -54,7 +54,7 @@ export function Roadmap() {
           </p>
         </motion.div>
         <div className="relative">
-          <Image width={40} height={40} src="/images/roadmap.svg" alt="" className="w-[80%] mx-auto mt-10" />
+          <Image width={40} height={40} src="/images/roadmap.svg" alt="" className="w-[100%] mx-auto mt-10" />
         </div>
 
         {/* <div className="relative">
