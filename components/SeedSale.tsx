@@ -15,7 +15,7 @@ interface PhaseIndicatorProps {
 
 const PhaseIndicator: React.FC<PhaseIndicatorProps> = ({ currentPhase, totalPhases }) => {
   return (
-    <h1 className="relative md:text-4xl text-3xl font-bold mb-2 w-fit mx-auto text-white bg-clip-text text-transparent backdrop-blur-lg shadow-inner">
+    <h1 className="relative md:text-4xl text-2xl font-bold mb-2 w-fit mx-auto text-white bg-clip-text text-transparent backdrop-blur-lg shadow-inner">
       <span className="absolute inset-0 shadow-inner bg-white/30 blur-lg"></span>
       <span className="relative z-10">
         FNX SEED SALE PHASE {currentPhase}
