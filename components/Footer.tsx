@@ -89,10 +89,10 @@ export function Footer() {
         {/* Footer Content */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-20">
           <div>
-            <Link href="/" className="flex items-center space-x-2 mb-4">
-            <Image src={require("../public/images/feenax.svg")} alt="refer" className="w-10 h-10 " />
+            <Link href="/" className="flex items-center space-x-2 ">
+            <Image src={require("../public/images/feenax-logo.svg")} alt="refer" className=" " />
 
-              <span className="text-xl font-bold">Feenax</span>
+              {/* <span className="text-xl font-bold">Feenax</span> */}
             </Link>
             <p className="text-gray-400 text-sm">
               © 2025 Feenax Network. All rights reserved.

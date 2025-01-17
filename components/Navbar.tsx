@@ -15,10 +15,10 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 backdrop-blur-xl border border-yellow-600/10 bg-yellow-700/10 m-3 rounded-full">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
-          <Link href="/" className="flex items-center space-x-2 mb-4">
-            <Image src={require("../public/images/feenax.svg")} alt="refer" className="w-10 h-10 " />
+          <Link href="/" className="flex items-center space-x-2 ">
+            <Image src={require("../public/images/feenax-logo.svg")} alt="refer" className="w-" />
 
-              <span className="text-xl font-bold">Feenax</span>
+              {/* <span className="text-xl font-bold">Feenax</span> */}
             </Link>
           </div>
           

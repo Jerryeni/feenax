@@ -80,10 +80,10 @@
     @apply bg-background text-foreground;
   }
   .gradient-card {
-    @apply bg-[#9F7825]/10 border border-[#9F7825]/30
+    @apply bg-[#9F7825]/5 border border-[#9F7825]/30
   }
   .glass-card {
-    @apply bg-transparent border border-[#9F7825]/20
+    @apply bg-transparent border border-[#9F7825]/20 rounded-lg
   }
 
   .gradient-btn {

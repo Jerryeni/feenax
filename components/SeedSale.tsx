@@ -15,12 +15,12 @@ interface PhaseIndicatorProps {
 
 const PhaseIndicator: React.FC<PhaseIndicatorProps> = ({ currentPhase, totalPhases }) => {
   return (
-    <h1 className="relative md:text-5xl text-3xl font-bold mb-2 w-fit mx-auto text-white bg-clip-text text-transparent backdrop-blur-lg shadow-inner">
-    <span className="absolute inset-0 shadow-inner bg-white/30 blur-lg"></span>
-    <span className="relative z-10">
-      FNX SEED SALE PHASE {currentPhase}
-      <sup className="text-sm align-super text-gray-400">/{totalPhases}</sup>
-    </span>
+    <h1 className="relative md:text-4xl text-3xl font-bold mb-2 w-fit mx-auto text-white bg-clip-text text-transparent backdrop-blur-lg shadow-inner">
+      <span className="absolute inset-0 shadow-inner bg-white/30 blur-lg"></span>
+      <span className="relative z-10">
+        FNX SEED SALE PHASE {currentPhase}
+        <sup className="text-sm align-super text-gray-400">/{totalPhases}</sup>
+      </span>
     </h1>
 
 
@@ -51,69 +51,69 @@ export function SeedSale() {
         animate={{ opacity: 1, y: 0 }}
         className="max-w-4xl mx-auto px-4 text-center relative"
       >
-      {/* Background Effects */}
-      {/* <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(240,185,11,0.15),transparent_70%)]" />
+        {/* Background Effects */}
+        {/* <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(240,185,11,0.15),transparent_70%)]" />
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#F0B90B]/10 rounded-full blur-3xl" /> */}
 
-      {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 mt-10 text-center">
-        <PhaseIndicator currentPhase={1} totalPhases={10} />
-        <p className="md:text-md text-xs text-gray-400 mb-12">ENDS IN</p>
+        {/* Content */}
+        <div className="relative z-10 container mx-auto px-4 mt-10 text-center">
+          <PhaseIndicator currentPhase={1} totalPhases={10} />
+          <p className="md:text-md text-xs text-gray-400 mb-12">ENDS IN</p>
 
-        <CountdownTimer targetDate={new Date("2025-02-04")} />
-        <Image src={require("../public/images/bg.png")} alt="Seed Sale"  className="absolute w-[200%] top-8 "/>
+          <CountdownTimer targetDate={new Date("2025-02-04")} />
+          <Image src={require("../public/images/bg.png")} alt="Seed Sale" className="absolute w-[200%] top-8 " />
 
-        {/* Stats Bar */}
-        <div className="w-full mt-20 max-w-4xl mx-auto backdrop-blur-sm bg-black/40 rounded-3xl border border-[#F0B90B]/20 overflow-hidden">
-          <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#F0B90B]/10 rounded-full blur-3xl" />
+          {/* Stats Bar */}
+          <div className="w-full mt-20 max-w-4xl mx-auto backdrop-blur-xl bg-secondary/5 rounded-3xl border border-[#F0B90B]/20 overflow-hidden">
+            {/* <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#F0B90B]/10 rounded-full blur-3xl" /> */}
 
-          <div className="grid grid-cols-3 p-6">
-            <div className="text-left">
-              <div className="text-xs md:text-sm text-gray-400 mb-1">
-                USDT RAISED
+            <div className="grid grid-cols-3 p-6">
+              <div className="text-left">
+                <div className="text-xs md:text-sm text-gray-400 mb-1">
+                  USDT RAISED
+                </div>
+                <div className="text-xs md:text-lg font-bold text-[#F0B90B]">
+                  12345 USDT
+                </div>
               </div>
-              <div className="text-xs md:text-lg font-bold text-[#F0B90B]">
-                12345 USDT
+              <div className="text-center">
+                <div className="text-xs md:text-sm text-gray-400 mb-">
+                  LISTING DATE
+                </div>
+                <div className="text-xs md:text-xl font-bold">
+                  Announced soon
+                </div>
+              </div>
+              <div className="text-right">
+                <div className="text-xs md:text-sm text-gray-400 mb-1">
+                  HOLDERS
+                </div>
+                <div className="text-xs md:text-xl font-bold text-[#F0B90B]">
+                  9876
+                </div>
               </div>
             </div>
-            <div className="text-center">
-              <div className="text-xs md:text-sm text-gray-400 mb-">
-                LISTING DATE
-              </div>
-              <div className="text-xs md:text-xl font-bold">
-                Announced soon
-              </div>
-            </div>
-            <div className="text-right">
-              <div className="text-xs md:text-sm text-gray-400 mb-1">
-                HOLDERS
-              </div>
-              <div className="text-xs md:text-xl font-bold text-[#F0B90B]">
-                9876
-              </div>
-            </div>
-          </div>
 
-          <div className="">
-            <TokenProgress
-              tokenBNBPrice={1.23}
-              tokenUSDTPrice={0.99}
-              userInfo={{}}
-              userDepositsUSDT={500}
-              userDepositsBNB={2.5}
-              userEarningsBNB={0.25}
-              userEarningsUSDT={100}
-              userId={123}
-              userTokens={1000}
-              progress={(1234567 * 100) / 10000000}
-              tokensSold={1234567}
-              totalTokens={10000000}
-              activitiesLength={0}
-            />
-            {}
+            <div className="">
+              <TokenProgress
+                tokenBNBPrice={1.23}
+                tokenUSDTPrice={0.99}
+                userInfo={{}}
+                userDepositsUSDT={500}
+                userDepositsBNB={2.5}
+                userEarningsBNB={0.25}
+                userEarningsUSDT={100}
+                userId={123}
+                userTokens={1000}
+                progress={(1234567 * 100) / 10000000}
+                tokensSold={1234567}
+                totalTokens={10000000}
+                activitiesLength={0}
+              />
+              { }
+            </div>
           </div>
         </div>
-      </div>
       </motion.div>
     </section>
 
@@ -134,7 +134,7 @@ export function SeedSale() {
     //         </div>
     //       ))}
     //     </div>
-        
+
     //       <Image src={require("../public/images/bg.png")} alt="Seed Sale"  className="absolute w-full top-6 "/>
     //       <div className="w-full mt-24 max-w-4xl mx-auto backdrop-blur-xl bg-black/40 rounded-3xl border border-[#F0B90B]/20 overflow-hidden">
     //       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#F0B90B]/10 rounded-full blur-3xl" />
