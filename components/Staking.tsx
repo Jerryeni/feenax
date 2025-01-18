@@ -15,8 +15,8 @@ export function Staking() {
 
   const tiers = [
     { tier: "Tier 1", stake: "100-500 $FNX", period: "30 days", apy: "2.5%" },
-    { tier: "Tier 2", stake: "500-900 $FNX", period: "30 days", apy: "2.5%" },
-    { tier: "Tier 3", stake: "1000 $FNX", period: "30 days", apy: "2.5%" }
+    { tier: "Tier 2", stake: "500-900 $FNX", period: "90 days", apy: "2.5%" },
+    { tier: "Tier 3", stake: "1000 $FNX", period: "180 days", apy: "2.5%" }
   ];
 
   return (
@@ -32,8 +32,7 @@ export function Staking() {
              <span className="gradient-text"> Stake & Earn </span> Additional Rewards
           </h2>
           <p className="text-muted/80 max-w-lg mx-auto">
-            By staking FNX coins, you can earn additional rewards while supporting
-            the stability of the Feenax blockchain.
+          The Feenax ecosystem is designed to reward participants, encouraging active engagement through staking opportunities. By staking FNX coins, users can earn additional rewards while supporting the stability of the Feenax blockchain.
           </p>
         </motion.div>
 

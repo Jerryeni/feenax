@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Twitter, Send, ArrowUpRight } from "lucide-react";
+import { Twitter, Send, ArrowUpRight, Facebook, Instagram, Youtube, SmilePlus } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -87,7 +87,7 @@ export function Footer() {
 
 
         {/* Footer Content */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-20">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 pb-10 mt-20">
           <div>
             <Link href="/" className="flex items-center space-x-2 ">
             <Image src={require("../public/images/feenax-logo.svg")} alt="refer" className=" " />
@@ -104,7 +104,7 @@ export function Footer() {
             <ul className="space-y-2 text-gray-400">
               <li>
                 <Link href="#why-us" className="hover:text-yellow-500 transition-colors">
-                  Why Feenax?
+                  About Feenax
                 </Link>
               </li>
               <li>
@@ -144,17 +144,42 @@ export function Footer() {
           <div>
             <h3 className="font-semibold mb-4">Socials</h3>
             <div className="flex space-x-4">
-              <Link 
-                href="#"
+              <Link title="X account"
+                href="https://x.com/Feenaxcoin"
                 className="w-10 h-10 rounded-full bg-white/5 hover:bg-white/10 transition-colors flex items-center justify-center"
               >
-                <Twitter className="w-5 h-5" />
+                X
+                {/* <Twitter className="w-5 h-5" /> */}
               </Link>
-              <Link 
-                href="#"
+              <Link title="Telegram"
+                href="https://t.me/feenaxcoin"
                 className="w-10 h-10 rounded-full bg-white/5 hover:bg-white/10 transition-colors flex items-center justify-center"
               >
                 <Send className="w-5 h-5" />
+              </Link>
+              <Link title="Facebook"
+                href="https://www.facebook.com/feenaxcoin/"
+                className="w-10 h-10 rounded-full bg-white/5 hover:bg-white/10 transition-colors flex items-center justify-center"
+              >
+                <Facebook className="w-5 h-5" />
+              </Link>
+              <Link title="Instagram"
+                href="https://www.instagram.com/feenaxcoin/"
+                className="w-10 h-10 rounded-full bg-white/5 hover:bg-white/10 transition-colors flex items-center justify-center"
+              >
+                <Instagram className="w-5 h-5" />
+              </Link>
+              <Link title="Youtube"
+                href="https://www.youtube.com/@Feenax"
+                className="w-10 h-10 rounded-full bg-white/5 hover:bg-white/10 transition-colors flex items-center justify-center"
+              >
+                <Youtube className="w-5 h-5" />
+              </Link>
+              <Link 
+                href="https://discord.gg/BH5dXeDm" title="Discord"
+                className="w-10 h-10 rounded-full bg-white/5 hover:bg-white/10 transition-colors flex items-center justify-center"
+              >
+                <SmilePlus className="w-5 h-5" />
               </Link>
             </div>
           </div>

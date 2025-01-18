@@ -8,23 +8,23 @@ import Image from "next/image";
 export function WhyFeenax() {
   const features = [
     {
-      title: "Community-driven Decision-making",
-      description: "Feenax places its community at the heart of its ecosystem, fostering collaboration and empowering users through transparent governance.",
+      title: "Layer-2 Compatibility",
+      description: "Feenax supports Layer-2 solutions, enabling seamless integration with third-party applications.This compatibility allows developers to deploy decentralized applications (dApps), NFTs, and other projects on the Feenax Chain, leveraging its scalability and low transaction fees. Similar to Other Chains, Feenax fosters an ecosystem where multiple projects can thrive while relying on the FNX Coin for transaction fees and utility.",
       src: "/images/bg2.png"
     },
     {
-      title: "Secure & Transparent Ledger",
-      description: "The Feenax blockchain uses an immutable ledger, ensuring that all transactions are verifiable and transparent.",
+      title: "Scalability and Speed",
+      description: "Feenax processes transactions in near real-time, supporting high transaction volumes without delays or bottlenecks. The blockchain’s architecture ensures consistent performance, even during peak network activity, making it ideal for high-volume use cases like gaming, NFTs, and financial applications.",
       src: "/images/img1.png"
     },
     {
-      title: "Potential high returns",
-      description: "Significant growth potential with the listing at $1",
+      title: "Proof of Authority (PoA) Mechanism",
+      description: "Feenax leverages the Proof of Authority (PoA) mechanism, replacing traditional consensus methods like Proof of Work (PoW) and Proof of Stake (PoS). In PoA, pre-assigned validators verify transactions, ensuring faster and more energy-efficient operations. This mechanism eliminates the need for extensive computational power while maintaining network security and reliability.",
       src: "/images/img4.png"
     },
     {
-      title: "Low gas fee",
-      description: "Transactions on Feenax are cost-efficient, with customizable gas fees that remain affordable regardless of network activity.",
+      title: "FNX Coin: The Native Currency",
+      description: "At the core of the Feenax ecosystem lies FNX Coin, the native cryptocurrency that powers all operations on the blockchain.  ",
       src: "/images/bg2.png"
     }
   ];
@@ -43,11 +43,10 @@ export function WhyFeenax() {
 
         </div>
           <h2 className="text-4xl font-bold mb-4">
-            Why <span className="gradient-text">Invest</span> In Feenax?
+            About <span className="gradient-text">Feenax</span> 
           </h2>
-          <p className="text-gray-400">
-            Feenax is built on a robust and innovative architecture designed to address the inefficiencies of
-            traditional blockchains, offering a platform that is scalable, secure, and efficient.
+          <p className="text-muted/80 text-sm max-w-3xl text-center mx-auto">
+          Feenax is a next-generation blockchain platform designed to overcome the limitations of traditional systems by offering unmatched speed, scalability, and efficiency. Built on the revolutionary Proof of Authority (PoA) mechanism, Feenax ensures secure and eco-friendly transaction validation while addressing the needs of decentralized finance, NFTs, gaming, and enterprise solutions.
           </p>
         </motion.div>
         
@@ -61,8 +60,8 @@ export function WhyFeenax() {
               transition={{ delay: index * 0.2 }}
               className="gradient-card  rounded-xl relative"
             >
-              <h3 className="text-sm text-[#FFFDF0]/80 p-6 font-semibold mb-2">{feature.title}</h3>
-              <p className="text-white p-6">{feature.description}</p>
+              <h3 className="text-[#FFFDF0]/80 p-6 font-semibold">{feature.title}</h3>
+              <p className="text-white text-xs p-6">{feature.description}</p>
               <div className="">
                 <Image width={40} height={40} src={feature.src} alt="" className="w-[80%] mx-auto mt-10" />
 
