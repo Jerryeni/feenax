@@ -52,12 +52,12 @@ const features = [
   {
     icon: Lock,
     title: "Limited supply",
-    description: "A limited supply model enhances scarcity, boosting its long-term value."
+    description: "A limited supply model enhances scarcity, boosting its long-term value. Feenax boasts a limited supply of 20 million FNX Coins, ensuring scarcity and sustainable growth. Feenax ensures scarcity, creating potential for long-term value appreciation."
   },
   {
     icon: Coins,
-    title: "Sustainability",
-    description: "Feenax boasts a limited supply of 20 million FNX Coins, ensuring scarcity and sustainable growth!"
+    title: "Rewarding Early Adopters",
+    description: "Early participants in the seed sale gain a unique opportunity to acquire FNX Coins at the best price before widespread adoption."
   },
   {
     icon: Users,
@@ -100,9 +100,9 @@ export function Tokenomics() {
             </div>
             {/* <PieChart /> */}
             <div className="relative">
-              <Image width={40} height={40} src="/images/chart.png" alt="" className="w-[60%] mx-auto mt-10" />
+              <Image width={40} height={40} src="/images/teko.svg" alt="" className="w-[60%] mx-auto mt-10" />
             </div>
-            <ul className="flex flex-col mx-auto py-4 text-muted/80">
+            {/* <ul className="flex flex-col mx-auto py-4 text-muted/80">
               <li className="text-xs text-left">Team (5%)</li>
               <li className="text-xs text-left">Airdrop (5%)</li>
               <li className="text-xs text-left">Presale (35%)</li>
@@ -110,7 +110,7 @@ export function Tokenomics() {
               <li className="text-xs text-left">further Listing (20%)</li>
               <li className="text-xs text-left">Staking rewards (25%)</li>
 
-            </ul>
+            </ul> */}
           </motion.div>
 
           <div className="space-y-8">
@@ -124,8 +124,8 @@ export function Tokenomics() {
                 className="bg-black/40 p-6 rounded-xl glass-card backdrop-blur-sm"
               >
                 {/* <feature.icon className="w-8 h-8 text-yellow-500 mb-4" /> */}
-                <h3 className="text-sm font-medium mb-2">{feature.title}</h3>
-                <p className="text-muted/80">{feature.description}</p>
+                <h3 className="text-md font-medium mb-2">{feature.title}</h3>
+                <p className="text-muted/80 text-sm">{feature.description}</p>
               </motion.div>
             ))}
           </div>

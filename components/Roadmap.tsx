@@ -48,13 +48,14 @@ export function Roadmap() {
           <h2 className="text-4xl font-bold mb-4">
             Our Journey: Feenax <span className="gradient-text">Roadmap</span>
           </h2>
-          <p className="text-muted/80 max-w-xl text-center mx-auto">
+          <p className="text-muted/80 max-w-3xl text-center mx-auto text-sm">
             The Feenax roadmap outlines the project's vision for growth and innovation,
-            focusing on key milestones and future developments.
+            focusing on key milestones and future developments. Feenax is on an ambitious journey to revolutionize the blockchain ecosystem with a clear and strategic roadmap. From the successful launch of FNX Coin to ecosystem expansion through partnerships, staking rewards, and cutting-edge development, every milestone is designed to deliver value to our community. With plans to roll out groundbreaking features, global collaborations, and sustainable growth strategies, Feenax is building a future where innovation meets opportunity.
+
           </p>
         </motion.div>
         <div className="relative">
-          <Image width={40} height={40} src="/images/roadmap(2).svg" alt="" className="w-[100%] mx-auto mt-10" />
+          <Image width={40} height={40} src="/images/roadmap.svg" alt="" className="w-[100%] mx-auto mt-10" />
         </div>
 
         {/* <div className="relative">

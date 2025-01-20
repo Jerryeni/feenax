@@ -24,7 +24,7 @@ export function WhyFeenax() {
     },
     {
       title: "FNX Coin: The Native Currency",
-      description: "At the core of the Feenax ecosystem lies FNX Coin, the native cryptocurrency that powers all operations on the blockchain.  ",
+      description: "At the core of the Feenax ecosystem lies the FNX Coin, a native cryptocurrency powering transactions, fees, and staking within the network. With its limited supply and strategic phased sale structure.",
       src: "/images/bg2.png"
     }
   ];

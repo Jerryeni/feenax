@@ -57,7 +57,7 @@ const ConnectingLine = ({ start = { x: 0, y: 0 }, end = { x: 0, y: 0 }, delay = 
 
 export function Blockchain() {
   return (
-    <section className="py-t overflow-hidden">
+    <section id="blockchain" className="py-t overflow-hidden">
       <div className="max-w-6xl mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -68,13 +68,15 @@ export function Blockchain() {
           <h2 className="text-4xl font-bold mb-4">
             <span className="gradient-text">Blockchain</span> Architecture
           </h2>
-          <p className="text-muted/80 max-w-2xl mx-auto">
-          Feenax is built on a robust and innovative architecture designed to address the inefficiencies of traditional blockchains, offering a platform that is scalable, secure, and efficient.
+          <p className="text-muted/80 max-w-2xl text-sm mx-auto">
+          Feenax is built on a robust and innovative architecture designed to address the inefficiencies of traditional blockchains, offering a platform that is scalable, secure, and efficient. Feenax leverages the Proof of Authority (PoA) mechanism, replacing traditional consensus methods like Proof of Work (PoW) and Proof of Stake (PoS). In PoA, pre-assigned validators verify transactions, ensuring faster and more energy-efficient operations. This mechanism eliminates the need for extensive computational power while maintaining network security and reliability.
+
           </p>
         </motion.div>
 
         <div className="relative">
           <Image width={40} height={40} src="/images/blockchain.svg" alt="" className="w-[80%] mx-auto mt-10" />
+          <p className="absolute text-center md:text-2xl text-muted/80"></p>
         </div>
         <div className="relative">
           <Image width={40} height={40} src="/images/blockchain2.svg" alt="" className="w-[80%] mx-auto mt-10" />

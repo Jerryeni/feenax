@@ -29,6 +29,9 @@ export function Navbar() {
               <Link href="#why-us" className="text-[#A6A9A8] hover:text-white transition-colors">
                 About us
               </Link>
+              <Link href="#blockchain" className="text-[#A6A9A8] hover:text-white transition-colors">
+                Blockchain
+              </Link>
               <Link href="#staking" className="text-[#A6A9A8] hover:text-white transition-colors">
                 Staking
               </Link>
@@ -37,6 +40,9 @@ export function Navbar() {
               </Link>
               <Link href="#roadmap" className="text-[#A6A9A8] hover:text-white transition-colors">
                 Roadmap
+              </Link>
+              <Link href="#projects" className="text-[#A6A9A8] hover:text-white transition-colors">
+                Projects
               </Link>
               <Link href="#faqs" className="text-[#A6A9A8] hover:text-white transition-colors">
                 FAQs
