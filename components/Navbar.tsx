@@ -4,11 +4,22 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
+import { shortenAddress } from "@/lib/utils";
+import { usePresale } from "@/providers/provider";
+
+import { useAccount } from "wagmi";
+import { ConnectButton } from "@rainbow-me/rainbowkit";
+
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const { initWallet, userAddress } = usePresale();
+  const { isConnected } = useAccount();
+
+  useEffect(() => {
+  }, [userAddress]);
 
   return (
     <motion.nav 
@@ -50,12 +61,12 @@ export function Navbar() {
             </div>
           </div>
 
-          <Button 
+          {/* <Button 
             variant="secondary" 
             className=" md:inline-block bg-gradient-to-r from-[#966602] via-[#F9F400] to-[#966602] text-xs md:text-base rounded-full hover:bg-yellow-500 text-black"
-          >
-            Connect Wallet
-          </Button>
+          > */}
+            <ConnectButton />
+          {/* </Button> */}
 
           {/* Mobile menu button */}
           <div className="md:hidden">
@@ -92,12 +103,13 @@ export function Navbar() {
                 FAQs
               </Link>
 
-              <Button 
+              {/* <Button 
                 variant="secondary" 
                 className="bg-gradient-to-r from-[#966602] via-[#F9F400] to-[#966602] rounded-full hover:bg-yellow-500 text-black w-full"
-              >
-                Connect Wallet
-              </Button>
+              > */}
+              <ConnectButton />
+
+              {/* </Button> */}
             </div>
           </motion.div>
         )}

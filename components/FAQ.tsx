@@ -16,15 +16,15 @@ export function FAQ() {
     },
     {
       question: "How can I participate in the FNX seed sale?",
-      answer: "You can participate in the FNX seed sale by connecting your wallet, selecting your preferred payment method (USDT or BNB), and purchasing FNX tokens through our platform."
+      answer: "You can participate in the FNX seed sale by connecting your wallet, selecting your preferred payment method (USDT or BNB), and purchasing FNX coins through our platform."
     },
     {
       question: "What makes Feenax different from other blockchain platforms?",
       answer: "Feenax stands out with its innovative architecture, community-driven governance, low transaction fees, and comprehensive ecosystem designed for long-term sustainability."
     },
     {
-      question: "What are the benefits of staking FNX tokens?",
-      answer: "Staking FNX tokens provides you with passive income through rewards, helps secure the network, and gives you voting rights in platform governance decisions."
+      question: "What are the benefits of staking FNX coins?",
+      answer: "Staking FNX coins provides you with passive income through rewards, helps secure the network, and gives you voting rights in platform governance decisions."
     },
     {
       question: "How does Feenax ensure transaction security?",

@@ -9,7 +9,7 @@ export function FeenaxProjects() {
   const projects = [
     {
       title: "Virtual Land NFT",
-      description: "Immersive virtual world where you can buy, sell, and trade land as NFTs. Dive into the future of real estate with Virtual NFT Land, where blockchain technology meets the metaverse. Feenax will enable users to buy, sell, and trade virtual properties using FNX Coins, driving demand and creating new use cases for the token.",
+      description: "Immersive virtual world where you can buy, sell, and trade land as NFTs. Dive into the future of real estate with Virtual NFT Land, where blockchain technology meets the metaverse. Feenax will enable users to buy, sell, and trade virtual properties using FNX Coins, driving demand and creating new use cases for the coin.",
       src: "/images/ic1.svg"
     },
     {

@@ -14,9 +14,9 @@ export function Staking() {
   ];
 
   const tiers = [
-    { tier: "Tier 1", stake: "100-500 $FNX", period: "30 days", apy: "2.5%" },
-    { tier: "Tier 2", stake: "500-900 $FNX", period: "90 days", apy: "5%" },
-    { tier: "Tier 3", stake: "1000 $FNX", period: "180 days", apy: "10%" }
+    { tier: "Tier 1", stake: "100-5000 $FNX", period: "90 days", apy: "2.5%" },
+    { tier: "Tier 2", stake: "100-50000 $FNX", period: "180 days", apy: "5%" },
+    { tier: "Tier 3", stake: "100-500000 $FNX", period: "360 days", apy: "10%" }
   ];
 
   return (
@@ -60,7 +60,7 @@ export function Staking() {
                 <p>Stake:</p>
                 <p>{tier.stake}</p>
               </div>
-              <div className="text-muted/80 flex justify-between">
+              <div className="text-muted/80  flex justify-between">
                 <p>Period: </p>
                 <p>{tier.period}</p>
               </div>
@@ -74,8 +74,8 @@ export function Staking() {
           viewport={{ once: true }}
           className="text-center"
         >
-          <Button className="gradient-btn rounded-full hover:bg-yellow-500 text-black">
-            Stake Now
+          <Button className="gradient-btn  opacity-40 cursor-not-allowed rounded-full hover:bg-yellow-500 text-black">
+            Stake Now | Coming soon
           </Button>
         </motion.div>
       </div>

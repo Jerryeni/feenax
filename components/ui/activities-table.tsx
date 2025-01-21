@@ -28,7 +28,7 @@ interface ActivitiesTableProps {
 }
 
 export function ActivitiesTable({ activities, length }: ActivitiesTableProps) {
-  const rowsPerPage = 10; // Number of rows per page
+  const rowsPerPage = 50; // Number of rows per page
   const { curPage, setCurPage } = usePresale();
 
   // Calculate total pages
@@ -84,7 +84,7 @@ export function ActivitiesTable({ activities, length }: ActivitiesTableProps) {
                 </span>
               </TableCell>
               <TableCell className="text-right font-medium text-[#F0B90B]">
-                {b2f(activity.tokenAmt).toFixed(2)} UCC{" "}
+                {b2f(activity.tokenAmt).toFixed(2)} FNX{" "}
                 {activity.mode == 1
                   ? b2f(activity.bnbAmt) == 0
                     ? `+ ${b2f(activity.usdtAmt).toFixed(2)} USDT`

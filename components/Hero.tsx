@@ -18,8 +18,9 @@ const PhaseIndicator: React.FC<PhaseIndicatorProps> = ({ currentPhase, totalPhas
     <h1 className="relative md:text-5xl text-3xl font-bold mb-2 w-fit mx-auto text-white bg-clip-text text-transparent backdrop-blur-lg shadow-inner">
     <span className="absolute inset-0 shadow-inner bg-white/30 blur-lg"></span>
     <span className="relative z-10">
-      Phase {currentPhase}
-    <sup className="text-sm align-super text-gray-400">/{totalPhases}</sup>
+      {/* Seed Sale Phase {currentPhase} */}
+      Seed Sale
+    {/* <sup className="text-sm align-super text-gray-400">/{totalPhases}</sup> */}
     </span>
     </h1>
 

@@ -133,7 +133,7 @@ export function TokenProgress({
                 className="w-3 h-3 md:w-5 md:h-5"
               />
               <span className="text-[#F0B90B] md:text-sm text-[8px] font-semibold ">
-                0.125 USDT
+                0.6 USDT
               </span>
             </div>
           </div>
@@ -161,7 +161,7 @@ export function TokenProgress({
               // disabled
               variant={selectedToken === symbol ? "secondary" : "ghost"}
               onClick={() => setSelectedToken(symbol)}
-              className="flex bg-black/40 items-center gap-1 w-full "
+              className="flex bg-black/40 items-center text-white gap-1 w-full "
             >
               <img src={details.icon} alt={symbol} className="w-6 h-6" />
               {symbol}
@@ -170,7 +170,7 @@ export function TokenProgress({
         </div>
 
         <h2 className="text-sm md:text-xl mb-8 text-white ">Step 2 - <span className=" text-gray-400">
-          Enter the Amount of Token You Would Like to Purchase
+          Enter the Amount of Coin You Would Like to Purchase
         </span> </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-1 md:gap-4">
@@ -189,7 +189,7 @@ export function TokenProgress({
               <AmountInput
                 value={amount ? calculateTokenAmount(amount) : ''}
                 onChange={() => { }}
-                token="UCC"
+                token="FNX"
                 tokenIcon="/images/coin.svg"
                 readOnly
               />
@@ -221,7 +221,7 @@ export function TokenProgress({
         {showActivities && (
           <div className="mt-6 space-y-6">
             <ReferralStats
-              referralLink={"https://ucchain.org/?ref=" + userId}
+              referralLink={"https://feenax.com/?ref=" + userId}
               usdtprice={(tokenUSDTPrice*b2f(userTokens)).toFixed(2)}
               totalEarningsUSDT={b2f(userEarningsUSDT).toFixed(2)}
               totalEarningsucc={b2f(userTokens).toFixed(2)}
