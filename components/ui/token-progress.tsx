@@ -8,55 +8,67 @@ import Image from "next/image";
 import { SUPPORTED_TOKENS } from "@/lib/constants";
 import { formatCurrency } from "@/lib/utils";
 import { AmountInput } from "./amount-input";
-
-const demoActivities = [
-  { id: 1, description: "Purchased 100 Feenax", date: "2025-01-01" },
-  { id: 2, description: "Referred a new user", date: "2025-01-02" },
-];
+import { PurchaseButton } from "./purchase-button";
+import { ReferralStats } from "./referral-stats";
+import { ActivitiesTable, Activity } from "@/components/ui/activities-table";
+import { b2f, usePresale } from "@/hooks/usePresale";
 
 interface TokenProgressProps {
   tokenUSDTPrice: number;
   tokenBNBPrice: number;
   tokensSold: number;
   totalTokens: number;
-  userInfo: any;
+  userInfo:any;
   userId: number;
   userDepositsUSDT: number;
   userDepositsBNB: number;
   userEarningsBNB: number;
   userEarningsUSDT: number;
   userTokens: number;
+  activities: Activity[];
   activitiesLength: number;
   progress: number;
 }
 
-export function TokenProgress(props: TokenProgressProps) {
-  const {
-    tokenUSDTPrice,
-    tokenBNBPrice,
-    tokensSold,
-    totalTokens,
-    userId,
-    userDepositsUSDT,
-    userDepositsBNB,
-    userEarningsBNB,
-    userEarningsUSDT,
-    userTokens,
-    activitiesLength,
-    progress,
-  } = props;
-
-  const activities = demoActivities;
+export function TokenProgress({
+  tokenUSDTPrice,
+  tokenBNBPrice,
+  tokensSold,
+  totalTokens,
+  userId,
+  userDepositsUSDT,
+  userDepositsBNB,
+  progress,
+  userEarningsBNB,
+  userEarningsUSDT,
+  userTokens,
+  activities,
+  activitiesLength,
+}: TokenProgressProps) {
+  // const progress = (tokensSold / totalTokens) * 100;
   const [selectedToken, setSelectedToken] = useState("USDT");
   const [amount, setAmount] = useState("");
+  const { status, buyWithUSDT, buyWithBNB } = usePresale();
   const [showActivities, setShowActivities] = useState(false);
-
+  // console.log(status);
   const handleAmountChange = (value: string) => {
     if (value === "" || /^\d*\.?\d*$/.test(value)) {
       setAmount(value);
     }
   };
-
+// console.log(  `{tokenUSDTPrice}: ${tokenUSDTPrice},
+//   {tokenBNBPrice}: ${tokenBNBPrice},
+//   {tokensSold}: ${tokensSold},
+//   {totalTokens}: ${totalTokens},
+//   {userId}: ${userId},kenUSDTPrice}: 0,
+//   {userDepositsUSDT}: ${userDepositsUSDT},
+//   {userDepositsBNB}: ${userDepositsBNB},
+//   {progress}: ${progress},
+//   {userEarningsBNB}: ${userEarningsBNB},
+//   {userEarningsUSDT}: ${userEarningsUSDT},
+//   {userTokens}: ${userTokens},
+//   {activities}: ${activities},
+//   {activitiesLength}: ${activitiesLength}`);
   const calculateTokenAmount = useCallback(
     (inputAmount: string) => {
       const numAmount = parseFloat(inputAmount) || 0;
@@ -67,24 +79,30 @@ export function TokenProgress(props: TokenProgressProps) {
     [selectedToken, tokenUSDTPrice, tokenBNBPrice]
   );
 
-  const handlePurchase = () => {
-    console.log(`Purchasing ${amount} with ${selectedToken}`);
+  const handlePurchase = async () => {
+    if (!amount) return;
+
+    if (selectedToken === "USDT") {
+      await buyWithUSDT(amount);
+    } else if (selectedToken === "BNB") {
+      await buyWithBNB(amount);
+    }
   };
 
   return (
-    <div className="space-y-6 backdrop-blur-xl gradient-card glass-cardx rounded-3xl p-6 md:p-8 overflow-x-auto">
+    <div className="space-y-6 backdrop-blur-xl gradient-card rounded-3xl p-6 md:p-8 overflow-x-auto">
       <div className="flex md:flex-row justify-between md:justify-between items-centers md:items-center gap-4">
         <div className="flex items-start gap-2 flex-col">
           <span className="py-1 px-3 text-[8px] md:text-sm glass-card">Current price</span>
           <div className="flex items-center justify-center gap-1">
             <Image
-              src="/images/icon.png"
-              alt="feenax-logo"
+              src="/images/coin.png"
+              alt="ucc-logo"
               width={12}
               height={12}
               className="md:w-5 md:h-5 w-3 h-3"
             />
-            <span className="text-gray-200 md:text-sm text-[8px]">1 Feenax =</span>
+            <span className="text-gray-200 md:text-sm text-[8px]">1 FNX =</span>
             <div className="flex items-center gap-2">
               <img
                 src="/images/tether.svg"
@@ -102,12 +120,12 @@ export function TokenProgress(props: TokenProgressProps) {
           <div className="flex items-center justify-center gap-1">
             <Image
               src="/images/coin.svg"
-              alt="feenax-logo"
+              alt="ucc-logo"
               width={12}
               height={12}
               className="md:w-5 md:h-5 w-3 h-3"
             />
-            <span className="text-gray-200 md:text-sm text-[8px]">1 Feenax =</span>
+            <span className="text-gray-200 md:text-sm text-[8px]">1 FNX =</span>
             <div className="flex items-center gap-2">
               <img
                 src="/images/tether.svg"
@@ -120,6 +138,7 @@ export function TokenProgress(props: TokenProgressProps) {
             </div>
           </div>
         </div>
+
       </div>
 
       <Progress
@@ -130,18 +149,19 @@ export function TokenProgress(props: TokenProgressProps) {
         indicatorClassName="bg-gradient-to-r from-[#F0B90B] to-[#FCD435]"
       />
 
-      <div className="mt-20 p-1 md:p-8">
+      <div className="pt-10 p-1 md:p-8">
         <h2 className="text-sm md:text-xl mb-8 text-white ">Step 1 - <span className=" text-gray-400">
           Select the Payment Method (BEP20)
         </span> </h2>
 
-        <div className="flex w-full md:w-[40%] mx-auto items-center justify-center p-1 bg-card glass-card gap-4 mb-8">
+        <div className="flex w-full md:w-[40%] gradient-card mx-auto items-center justify-center p-1 bg-cardx glass-card gap-4 mb-8">
           {Object.entries(SUPPORTED_TOKENS).map(([symbol, details]) => (
             <Button
               key={symbol}
+              // disabled
               variant={selectedToken === symbol ? "secondary" : "ghost"}
               onClick={() => setSelectedToken(symbol)}
-              className="flex items-center gap-1 w-full"
+              className="flex bg-black/40 items-center gap-1 w-full "
             >
               <img src={details.icon} alt={symbol} className="w-6 h-6" />
               {symbol}
@@ -169,29 +189,54 @@ export function TokenProgress(props: TokenProgressProps) {
               <AmountInput
                 value={amount ? calculateTokenAmount(amount) : ''}
                 onChange={() => { }}
-                token="Feenax"
-                tokenIcon="/images/icon.png"
+                token="UCC"
+                tokenIcon="/images/coin.svg"
                 readOnly
               />
             </>
           )}
         </div>
 
-        {/* <Button
+        <PurchaseButton
+          status={status}
           onClick={handlePurchase}
-          disabled={!amount || parseFloat(amount) <= 0}
-          className="w-full gradient-btn  text-whitex rounded py-2 px-4 "
+          disabled={!amount || parseFloat(amount) <= 0 || status == "APPROVING"|| status == "APPROVED" ||status == "PURCHASING" }
+        />
+      </div>
+
+      <div className="border-t border-[#F0B90B]/20 pt-6">
+        <Button
+          variant="secondary"
+          onClick={() => setShowActivities(!showActivities)}
+          className="w-full flex items-center justify-between text-left bg-[#F0B90B]/30 hover:bg-[#F0B90B]/50 hover:text-white"
         >
-          Purchase
-        </Button> */}
-        <Button 
-            onClick={handlePurchase}
-            disabled={!amount || parseFloat(amount) <= 0}
-            variant="secondary" 
-            className="bg-gradient-to-r from-[#966602] via-[#F9F400]  to-[#966602] w-full rounded-full hover:bg-yellow-500 text-black"
-          >
-            Buy FNX
-          </Button>
+          <span className="text-lg font-medium">Recent Activities & Referrals</span>
+          {showActivities ? (
+            <ChevronUp className="w-5 h-5" />
+          ) : (
+            <ChevronDown className="w-5 h-5" />
+          )}
+        </Button>
+
+        {showActivities && (
+          <div className="mt-6 space-y-6">
+            <ReferralStats
+              referralLink={"https://ucchain.org/?ref=" + userId}
+              usdtprice={(tokenUSDTPrice*b2f(userTokens)).toFixed(2)}
+              totalEarningsUSDT={b2f(userEarningsUSDT).toFixed(2)}
+              totalEarningsucc={b2f(userTokens).toFixed(2)}
+              totalEarningsBNB={b2f(userEarningsBNB).toFixed(2)}
+              totalDepositBNB={b2f(userDepositsBNB).toFixed(2)}
+              totalDepositUSDT={b2f(userDepositsUSDT).toFixed(2)}
+
+            />
+
+            <div>
+              <h3 className="text-lg font-medium mb-4">Recent Activities</h3>
+              <ActivitiesTable activities={activities} length={activitiesLength} />
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

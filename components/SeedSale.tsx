@@ -94,7 +94,7 @@ export function SeedSale() {
               </div>
             </div>
 
-            <div className="">
+            {/* <div className="">
               <TokenProgress
                 tokenBNBPrice={1.23}
                 tokenUSDTPrice={0.99}
@@ -111,7 +111,7 @@ export function SeedSale() {
                 activitiesLength={0}
               />
               { }
-            </div>
+            </div> */}
           </div>
         </div>
       </motion.div>

@@ -10,12 +10,14 @@ import { Roadmap } from "@/components/Roadmap";
 import { FAQ } from "@/components/FAQ";
 import { Footer } from "@/components/Footer";
 import { FeenaxProjects } from "@/components/FeenaxProject";
+import Hero from "@/components/Hero";
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-black to-zinc-900">
       <Navbar />
-      <SeedSale />
+      {/* <SeedSale /> */}
+      <Hero />
       <Features />
       <WhyFeenax />
       <Blockchain />

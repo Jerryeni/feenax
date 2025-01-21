@@ -24,16 +24,16 @@ export function PurchaseButton({ status, onClick, disabled }: PurchaseButtonProp
         return (
           <>
             <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-            Processing purchase...
+            Confirming from wallet...
           </>
         );
-      case "PURCHASING":
-        return (
-          <>
-            <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-            Processing purchase...
-          </>
-        );
+      // case "PURCHASING":
+      //   return (
+      //     <>
+      //       <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+      //       Processing purchase...
+      //     </>
+      //   );
       case "CONFIRMED":
         return (
           <>
@@ -49,7 +49,7 @@ export function PurchaseButton({ status, onClick, disabled }: PurchaseButtonProp
           </>
         );
       default:
-        return "Buy $FEENAX";
+        return "Buy $FNX";
     }
   };
 
@@ -66,10 +66,11 @@ export function PurchaseButton({ status, onClick, disabled }: PurchaseButtonProp
 
   const getButtonClass = () => {
     return cn(
-      "w-full h-12 text-lg font-semibold transition-all duration-200",
+      "w-full h-12 text-lg font-semibold  text-black transition-all duration-200",
       status === "APPROVED" && "bg-green-500 hover:bg-green-600",
       status === "CONFIRMED" && "bg-green-600",
-      status === "ERROR" && "bg-red-500 hover:bg-red-600"
+      status === "ERROR" && "bg-red-500 hover:bg-red-600",
+      status === "default" && "gradient-btn text-black"
     );
   };
 

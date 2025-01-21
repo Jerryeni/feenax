@@ -13,7 +13,7 @@ export function Features() {
     },
     {
       title: "Purchase FNX",
-      description: "Use crypto or fiat to buy FNX tokens.",
+      description: "Use crypto or fiat to buy FNX Coins.",
       src: "/images/icon(1).svg"
     },
     {

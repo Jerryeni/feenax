@@ -1,12 +1,12 @@
 import { type ClassValue, clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
-import { CountdownTimer } from '../types';
+import { CountdownTime } from './types';
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-export function calculateTimeLeft(targetDate: Date): CountdownTimer {
+export function calculateTimeLeft(targetDate: Date): CountdownTime {
   const total = targetDate.getTime() - Date.now();
   
   if (total <= 0) {

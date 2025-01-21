@@ -22,7 +22,7 @@ export function AmountInput({
         value={value}
         onChange={(e) => onChange(e.target.value)}
         readOnly={readOnly}
-        className="w-full bg-black/30 border border-[#181D20]/10 rounded-xl px-4 py-5 pr-24 text-lg"
+        className="w-full bg-black/30 border border-[#181D20]/30 rounded-xl px-4 py-5 pr-24 text-lg"
         placeholder="0"
       />
       <div className="absolute right-3 top-1/2 bg-black/40 text-xs p-2 rounded-full -translate-y-1/2 flex items-center gap-2">
