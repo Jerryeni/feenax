@@ -21,7 +21,7 @@ export const networks = [bsc]
 // })
 
 export const config = getDefaultConfig({
-  appName: 'UCC Seed Sale',
+  appName: 'FEENAX Seed Sale',
   projectId: projectId||"296924cdb9a40ac2bfe6b78e60779e09",
   chains: [bsc],
   ssr: false, // If your dApp uses server side rendering (SSR)

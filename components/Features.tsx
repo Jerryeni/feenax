@@ -35,7 +35,7 @@ export function Features() {
             Participate In FNX Seed Sale
           </h2>
           <p className="text-xl md:text-3xl font-medium">
-            And Get <span className="gradient-text">High Returns</span>
+            And Get <span className="gradient-text">Staking Rewards</span>
           </p>
           <p className="text-gray-400 mt-2">Own FNX in 3 simple steps</p>
         </div>

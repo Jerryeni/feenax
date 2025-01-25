@@ -14,9 +14,9 @@ export function Staking() {
   ];
 
   const tiers = [
-    { tier: "Tier 1", stake: "100-5000 $FNX", period: "90 days", apy: "2.5%" },
-    { tier: "Tier 2", stake: "100-50000 $FNX", period: "180 days", apy: "5%" },
-    { tier: "Tier 3", stake: "100-500000 $FNX", period: "360 days", apy: "10%" }
+    { tier: "Tier 1", stake: "100-5000 $FNX", period: "90 days", apy: "20%" },
+    { tier: "Tier 2", stake: "100-50000 $FNX", period: "180 days", apy: "30%" },
+    { tier: "Tier 3", stake: "100-500000 $FNX", period: "360 days", apy: "42%" }
   ];
 
   return (

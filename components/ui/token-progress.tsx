@@ -18,7 +18,7 @@ interface TokenProgressProps {
   tokenBNBPrice: number;
   tokensSold: number;
   totalTokens: number;
-  userInfo:any;
+  userInfo: any;
   userId: number;
   userDepositsUSDT: number;
   userDepositsBNB: number;
@@ -56,19 +56,19 @@ export function TokenProgress({
       setAmount(value);
     }
   };
-// console.log(  `{tokenUSDTPrice}: ${tokenUSDTPrice},
-//   {tokenBNBPrice}: ${tokenBNBPrice},
-//   {tokensSold}: ${tokensSold},
-//   {totalTokens}: ${totalTokens},
-//   {userId}: ${userId},kenUSDTPrice}: 0,
-//   {userDepositsUSDT}: ${userDepositsUSDT},
-//   {userDepositsBNB}: ${userDepositsBNB},
-//   {progress}: ${progress},
-//   {userEarningsBNB}: ${userEarningsBNB},
-//   {userEarningsUSDT}: ${userEarningsUSDT},
-//   {userTokens}: ${userTokens},
-//   {activities}: ${activities},
-//   {activitiesLength}: ${activitiesLength}`);
+  // console.log(  `{tokenUSDTPrice}: ${tokenUSDTPrice},
+  //   {tokenBNBPrice}: ${tokenBNBPrice},
+  //   {tokensSold}: ${tokensSold},
+  //   {totalTokens}: ${totalTokens},
+  //   {userId}: ${userId},kenUSDTPrice}: 0,
+  //   {userDepositsUSDT}: ${userDepositsUSDT},
+  //   {userDepositsBNB}: ${userDepositsBNB},
+  //   {progress}: ${progress},
+  //   {userEarningsBNB}: ${userEarningsBNB},
+  //   {userEarningsUSDT}: ${userEarningsUSDT},
+  //   {userTokens}: ${userTokens},
+  //   {activities}: ${activities},
+  //   {activitiesLength}: ${activitiesLength}`);
   const calculateTokenAmount = useCallback(
     (inputAmount: string) => {
       const numAmount = parseFloat(inputAmount) || 0;
@@ -97,7 +97,7 @@ export function TokenProgress({
           <div className="flex items-center justify-center gap-1">
             <Image
               src="/images/coin.png"
-              alt="ucc-logo"
+              alt="fnx-logo"
               width={12}
               height={12}
               className="md:w-5 md:h-5 w-3 h-3"
@@ -120,7 +120,7 @@ export function TokenProgress({
           <div className="flex items-center justify-center gap-1">
             <Image
               src="/images/coin.svg"
-              alt="ucc-logo"
+              alt="fnx-logo"
               width={12}
               height={12}
               className="md:w-5 md:h-5 w-3 h-3"
@@ -137,6 +137,8 @@ export function TokenProgress({
               </span>
             </div>
           </div>
+          <span className="text-muted/80 text-xs text-red-500 animate-pulse">20% price increase on next sale</span>
+
         </div>
 
       </div>
@@ -145,7 +147,7 @@ export function TokenProgress({
         value={progress}
         tokensSold={tokensSold}
         totalTokens={totalTokens}
-        className="h-4 rounded-xl bg-secondary"
+        className="h-4 rounded-xl bg-black/80 border border-[#F0B90B]/20"
         indicatorClassName="bg-gradient-to-r from-[#F0B90B] to-[#FCD435]"
       />
 
@@ -200,7 +202,7 @@ export function TokenProgress({
         <PurchaseButton
           status={status}
           onClick={handlePurchase}
-          disabled={!amount || parseFloat(amount) <= 0 || status == "APPROVING"|| status == "APPROVED" ||status == "PURCHASING" }
+          disabled={!amount || parseFloat(amount) <= 0 || status == "APPROVING" || status == "APPROVED" || status == "PURCHASING"}
         />
       </div>
 
@@ -210,7 +212,7 @@ export function TokenProgress({
           onClick={() => setShowActivities(!showActivities)}
           className="w-full flex items-center justify-between text-left bg-[#F0B90B]/30 hover:bg-[#F0B90B]/50 hover:text-white"
         >
-          <span className="text-lg font-medium">Recent Activities & Referrals</span>
+          <span className="text-lg font-medium text-white">Recent Activities & Referrals</span>
           {showActivities ? (
             <ChevronUp className="w-5 h-5" />
           ) : (
@@ -222,7 +224,7 @@ export function TokenProgress({
           <div className="mt-6 space-y-6">
             <ReferralStats
               referralLink={"https://feenax.com/?ref=" + userId}
-              usdtprice={(tokenUSDTPrice*b2f(userTokens)).toFixed(2)}
+              usdtprice={(tokenUSDTPrice * b2f(userTokens)).toFixed(2)}
               totalEarningsUSDT={b2f(userEarningsUSDT).toFixed(2)}
               totalEarningsucc={b2f(userTokens).toFixed(2)}
               totalEarningsBNB={b2f(userEarningsBNB).toFixed(2)}

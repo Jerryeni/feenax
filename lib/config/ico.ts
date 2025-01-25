@@ -78,8 +78,8 @@ export const VESTING_SCHEDULE: VestingSchedule = {
 };
 
 export const ICO_CONFIG = {
-  name: 'UCC Network',
-  symbol: 'UCC',
+  name: 'FEENAX Network',
+  symbol: 'FEENAX',
   decimals: 18,
   contractAddress: {
     bsc: '0x...',
@@ -102,9 +102,9 @@ export const ICO_CONFIG = {
     }
   },
   socials: {
-    telegram: 'https://t.me/uccnetwork',
-    twitter: 'https://twitter.com/uccnetwork',
-    medium: 'https://medium.com/@uccnetwork',
-    github: 'https://github.com/uccnetwork'
+    telegram: 'https://t.me/feenaxnetwork',
+    twitter: 'https://twitter.com/feenaxnetwork',
+    medium: 'https://medium.com/@feenaxnetwork',
+    github: 'https://github.com/feenaxnetwork'
   }
 };

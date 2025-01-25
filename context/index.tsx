@@ -18,9 +18,9 @@ if (!projectId) {
 
 // Set up metadata
 const metadata = {
-    name: 'ucchain',
-    description: 'Ucchain network',
-    url: 'https://ucchain.org', // origin must match your domain & subdomain
+    name: 'Feenax',
+    description: 'Feenax network',
+    url: 'https://feenax.com', // origin must match your domain & subdomain
     icons: ['https://avatars.githubusercontent.com/u/179229932']
 }
 

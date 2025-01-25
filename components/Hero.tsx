@@ -16,12 +16,12 @@ interface PhaseIndicatorProps {
 const PhaseIndicator: React.FC<PhaseIndicatorProps> = ({ currentPhase, totalPhases }) => {
   return (
     <h1 className="relative md:text-5xl text-3xl font-bold mb-2 w-fit mx-auto text-white bg-clip-text text-transparent backdrop-blur-lg shadow-inner">
-    <span className="absolute inset-0 shadow-inner bg-white/30 blur-lg"></span>
-    <span className="relative z-10">
-      {/* Seed Sale Phase {currentPhase} */}
-      Seed Sale
-    {/* <sup className="text-sm align-super text-gray-400">/{totalPhases}</sup> */}
-    </span>
+      <span className="absolute inset-0 shadow-inner bg-white/30 blur-lg"></span>
+      <span className="relative z-10">
+        {/* Seed Sale Phase {currentPhase} */}
+        Seed Sale
+        {/* <sup className="text-sm align-super text-gray-400">/{totalPhases}</sup> */}
+      </span>
     </h1>
 
 
@@ -73,12 +73,12 @@ export default function Hero() {
               <div className="text-xs md:text-lg font-bold text-[#F0B90B]">
                 {uccInfo.totalInvestmentsUSDT} USDT
               </div>
-              <div className="text-xs md:text-sm text-gray-400 mb-1">
+              {/* <div className="text-xs md:text-sm text-gray-400 mb-1">
                 BNB RAISED
               </div>
               <div className="text-xs md:text-lg font-bold text-[#F0B90B]">
                 {uccInfo.totalInvestmentsBNB.toFixed(4)} BNB
-              </div>
+              </div> */}
             </div>
             <div className="text-center">
               <div className="text-xs md:text-sm text-gray-400 mb-">
@@ -88,14 +88,21 @@ export default function Hero() {
                 Announced soon
               </div>
             </div>
-            <div className="text-right">
+            {/* <div className="hidden text-right">
               <div className="text-xs md:text-sm text-gray-400 mb-1">
                 HOLDERS
               </div>
               <div className="text-xs md:text-xl font-bold text-[#F0B90B]">
                 {parseInt(uccInfo.totalUsers.toString())}
               </div>
+            </div> */}
+            <div className="text-xs md:text-sm text-gray-400 mb-1 text-right">
+              BNB RAISED
+              <div className="text-xs md:text-lg font-bold text-[#F0B90B]">
+              {uccInfo.totalInvestmentsBNB.toFixed(4)} BNB
             </div>
+            </div>
+            
           </div>
 
           <div className="">
@@ -111,14 +118,14 @@ export default function Hero() {
               userTokens={userUCCInfo.usersInfo?.[7] ?? 0}
               progress={
                 uccInfo.totalTokensToBEDistributed &&
-                (uccInfo.totalTokensToBEDistributed * 100) / 10000000
+                (uccInfo.totalTokensToBEDistributed * 100) / 100000
               }
               tokensSold={uccInfo.totalTokensToBEDistributed}
-              totalTokens={10000000}
+              totalTokens={100000}
               activities={userUCCInfo.recentActivities}
               activitiesLength={userUCCInfo.activityLength}
             />
-            {}
+            { }
           </div>
         </div>
       </div>
