@@ -19,14 +19,14 @@ export default function Home() {
       {/* <SeedSale /> */}
       <Hero />
       <Features />
-      <WhyFeenax />
+      {/* <WhyFeenax />
       <Blockchain />
       <Staking />
       <Tokenomics />
       <Roadmap />
       <FeenaxProjects />
       <ReferAndEarn />
-      <FAQ />
+      <FAQ /> */}
       <Footer />
     </main>
   );

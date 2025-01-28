@@ -35,7 +35,7 @@ export function Navbar() {
             </Link>
           </div>
           
-          <div className="hidden md:block">
+          <div className="hidden ">
             <div className="flex items-center space-x-8">
               <Link href="#why-us" className="text-[#A6A9A8] hover:text-white transition-colors">
                 About us

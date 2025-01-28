@@ -137,7 +137,7 @@ export function TokenProgress({
               </span>
             </div>
           </div>
-          <span className="text-muted/80 text-xs text-red-500 animate-pulse">20% price increase on next sale</span>
+          <span className="text-muted/80 text-xs text-red-500 animate-pulse">20% Price Increase on Next Phase</span>
 
         </div>
 
