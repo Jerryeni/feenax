@@ -20,7 +20,7 @@ if (!projectId) {
 const metadata = {
     name: 'Feenax',
     description: 'Feenax network',
-    url: 'https://feenax.com', // origin must match your domain & subdomain
+    url: 'https://fnxcoins.com', 
     icons: ['https://avatars.githubusercontent.com/u/179229932']
 }
 

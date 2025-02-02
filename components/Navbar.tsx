@@ -5,12 +5,13 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { Menu, X } from "lucide-react";
+import { ArrowLeft, Menu, X } from "lucide-react";
 import { shortenAddress } from "@/lib/utils";
 import { usePresale } from "@/providers/provider";
 
 import { useAccount } from "wagmi";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
+// import { ConnectButton } from "@rainbow-me/rainbowkit";
 
 
 export function Navbar() {
@@ -22,7 +23,7 @@ export function Navbar() {
   }, [userAddress]);
 
   return (
-    <motion.nav 
+    <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       className="fixed w-full z-50"
@@ -34,7 +35,7 @@ export function Navbar() {
               <Image src={require("../public/images/feenax-logo.svg")} alt="Feenax Logo" className="w-20 h-20" />
             </Link>
           </div>
-          
+
           <div className="hidden ">
             <div className="flex items-center space-x-8">
               <Link href="#why-us" className="text-[#A6A9A8] hover:text-white transition-colors">
@@ -65,13 +66,20 @@ export function Navbar() {
             variant="secondary" 
             className=" md:inline-block bg-gradient-to-r from-[#966602] via-[#F9F400] to-[#966602] text-xs md:text-base rounded-full hover:bg-yellow-500 text-black"
           > */}
-            <ConnectButton />
+            <Link href="https://feenax.com" className="text-[#A6A9A8] hidden md:flex items-center gap-1 md:gap-2 md:text-base text-[8px] hover:text-white transition-colors">
+            <ArrowLeft className="w-4 h-4 text-yellow-500" />
+            Back to Home
+            </Link>
+          <ConnectButton />
+
+
+          {/* <ConnectButton /> */}
           {/* </Button> */}
 
           {/* Mobile menu button */}
           <div className="md:hidden">
-            <button 
-              onClick={() => setIsOpen(!isOpen)} 
+            <button
+              onClick={() => setIsOpen(!isOpen)}
               className="text-[#A6A9A8] hover:text-white focus:outline-none"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -81,26 +89,14 @@ export function Navbar() {
 
         {/* Mobile menu */}
         {isOpen && (
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             className="md:hidden mt-2"
           >
             <div className="flex flex-col space-y-4">
-              <Link href="#why-us" className="text-[#A6A9A8] hover:text-white transition-colors">
-                About us
-              </Link>
-              <Link href="#staking" className="text-[#A6A9A8] hover:text-white transition-colors">
-                Staking
-              </Link>
-              <Link href="#tokenomics" className="text-[#A6A9A8] hover:text-white transition-colors">
-                Tokenomics
-              </Link>
-              <Link href="#roadmap" className="text-[#A6A9A8] hover:text-white transition-colors">
-                Roadmap
-              </Link>
-              <Link href="#faqs" className="text-[#A6A9A8] hover:text-white transition-colors">
-                FAQs
+              <Link href="https://feenax.com" className="text-[#A6A9A8] hover:text-white transition-colors">
+                Back to Home
               </Link>
 
               {/* <Button 
