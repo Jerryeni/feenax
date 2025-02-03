@@ -93,6 +93,8 @@ export function usePresale() {
       //   ref, // ref
       //   parsedAmount
       // );
+
+      await new Promise((resolve) => setTimeout(resolve, 5000));
       const buyTx = await writeContract(config, {
         abi: PRESALE_ABI,
         address: ADDRESSES.PRESALE,

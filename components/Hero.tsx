@@ -59,7 +59,7 @@ export default function Hero() {
         <PhaseIndicator currentPhase={1} totalPhases={10} />
         <p className="md:text-md text-xs text-gray-400 mb-12">ENDS IN</p>
 
-        <CountdownTimer targetDate={new Date("2025-02-04")} />
+        <CountdownTimer targetDate={new Date("2025-02-19")} />
 
         {/* Stats Bar */}
         <div className="w-full mt-24 max-w-4xl mx-auto backdrop-blur-xl bg-black/40 rounded-3xl border border-[#F0B90B]/20 overflow-hidden">

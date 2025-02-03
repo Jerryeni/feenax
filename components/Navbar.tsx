@@ -23,9 +23,7 @@ export function Navbar() {
   }, [userAddress]);
 
   return (
-    <motion.nav
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
+    <nav
       className="fixed w-full z-50"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 backdrop-blur-xl border border-yellow-600/10 bg-yellow-700/10 m-3 rounded-full">
@@ -110,6 +108,6 @@ export function Navbar() {
           </motion.div>
         )}
       </div>
-    </motion.nav>
+    </nav>
   );
 }
