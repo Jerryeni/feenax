@@ -36,10 +36,10 @@ export function CountdownTimer({ targetDate }: CountdownProps) {
       {Object.entries(timeLeft).map(([key, value]) => (
         <div key={key} className="text-center">
           <div className="bg-black/30 backdrop-blur-sm rounded-2xl px-6 py-4 md:min-w-[100px] text-white border glass-card border-primary/20">
-            <div className="text-md md:text-4xl font-bold">{String(value).padStart(2, '0')}</div>
+            <div className="text-lg md:text-6xl font-bold">{String(value).padStart(2, '0')}</div>
           
           </div>
-          <div className="text-xs md:text-sm text-muted-foreground uppercase mt-1">{key}</div>
+          <div className="text-sm md:text-lg text-white uppercase mt-1">{key}</div>
         </div>
       ))}
     </div>

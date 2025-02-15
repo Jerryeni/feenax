@@ -8,17 +8,17 @@ export function Features() {
   const features = [
     {
       title: "Connect Wallet",
-      description: "Set up and connect a decentralized digital wallet that is compatible with Feenax.",
+      description: "Set up and Connect a Decentralized Digital Wallet that is Compatible with Feenax.",
       src: "/images/icon.svg"
     },
     {
       title: "Purchase FNX",
-      description: "Use cryptocurrency, such as USDT BEP-20, to purchase FNX Coins seamlessly through the Feenax platform.",
+      description: "Use Cryptocurrency, such as USDT BEP-20, to Purchase FNX Coins seamlessly through the Feenax Platform.",
       src: "/images/icon(1).svg"
     },
     {
       title: "Staking Rewards",
-      description: "Stake your FNX Coins and enjoy potential rewards from the growing Feenax ecosystem.",
+      description: "Stake your FNX Coins and Enjoy Potential Rewards from the Growing Feenax Ecosystem.",
       src: "/images/icon(2).svg"
     }
   ];
@@ -32,7 +32,7 @@ export function Features() {
       >
         <div className="text-center mb-16">
           <h2 className="text-xl md:text-3xl font-medium mb-4">
-            Participate In FNX Seed Sale
+            Participate In FNX Presale
           </h2>
           <p className="text-xl md:text-3xl font-medium">
             And Get <span className="gradient-text">Staking Rewards</span>

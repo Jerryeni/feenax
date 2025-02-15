@@ -92,6 +92,9 @@
   .gradient-text {
     @apply bg-clip-text text-transparent bg-gradient-to-r from-[#966602] via-[#F9F400]  to-[#966602];
   }
+  .heading {
+    font-family: helveticaNeueDisplay,helveticaNeueDisplay Fallback;
+  }
 }
 
 

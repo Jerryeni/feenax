@@ -15,7 +15,7 @@ export function Footer() {
     <footer className="relative pt-20 pb-10x bg-black/40 border-t border-white/10">
       <div className="max-w-6xl mx-auto px-4 relative">
        
-        <Image src={require("../public/images/bg.svg")} alt="refer" className="absolute top-0 h-96 w-full" />
+        <Image src={require("../public/images/bg.svg")} alt="refer" className="absolute top-32 h-96 w-full" />
 
 
         {/* Footer Content */}
@@ -188,6 +188,15 @@ export function Footer() {
               >
                 <Image src={require("../public/coinmarketcap.png")} alt="refer" className="w-5 h-5 text-white bg-white rounded-full p-1" />
                 <p className="text-sm text-muted/80">Coin market</p>
+
+              </Link>
+
+              <Link
+                href="https://www.tiktok.com/@feenax.blockchain?_t=ZS-8tvAxsIrqyu&_r=1"
+                className=" rounded-full  transition-colors flex gap-4 items-center justify-start"
+              >
+                <Image src={require("../public/vecteezy_tiktok-png-icon_16716450.png")} alt="refer" className="w-5 h-5 text-white bg-white rounded-full p-1" />
+                <p className="text-sm text-muted/80">Tiktok</p>
 
               </Link>
             </div>

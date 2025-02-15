@@ -49,7 +49,7 @@ export function PurchaseButton({ status, onClick, disabled }: PurchaseButtonProp
           </>
         );
       default:
-        return "Buy $FNX";
+        return "BUY $FNX";
     }
   };
 

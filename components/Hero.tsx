@@ -15,12 +15,12 @@ interface PhaseIndicatorProps {
 
 const PhaseIndicator: React.FC<PhaseIndicatorProps> = ({ currentPhase, totalPhases }) => {
   return (
-    <h1 className="relative md:text-5xl text-3xl font-bold mb-2 w-fit mx-auto text-white bg-clip-text text-transparent backdrop-blur-lg shadow-inner">
-      <span className="absolute inset-0 shadow-inner bg-white/30 blur-lg"></span>
+    <h1 className="relative md:text-7xl text-3xl font-bold mb-2 w-fit mx-auto heading text-[#F0B90B] font-black bg-clip-text text-transparentx backdrop-blur-lg shadow-inner">
+      <span className="absolute inset-0 shadow-inner bg-white/5 blur-xl"></span>
       <span className="relative z-10">
         {/* Seed Sale Phase {currentPhase} */}
-        Seed Sale
-        {/* <sup className="text-sm align-super text-gray-400">/{totalPhases}</sup> */}
+        PRESALE PHASE 1
+        {/* <sup className="text-sm align-super text-white">/{totalPhases}</sup> */}
       </span>
     </h1>
 
@@ -57,7 +57,7 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 mt-10 text-center">
         <PhaseIndicator currentPhase={1} totalPhases={10} />
-        <p className="md:text-md text-xs text-gray-400 mb-12">ENDS IN</p>
+        <p className="md:text-xl text-sm text-white mb-12">ENDS IN</p>
 
         <CountdownTimer targetDate={new Date("2025-03-15T18:29:59Z")} />
 
@@ -67,13 +67,13 @@ export default function Hero() {
 
           <div className="grid grid-cols-3 p-6">
             <div className="text-left">
-              <div className="text-xs md:text-sm text-gray-400 mb-1">
+              <div className="text-sm md:text-lg text-white mb-1">
                 USDT RAISED
               </div>
-              <div className="text-xs md:text-lg font-bold text-[#F0B90B]">
+              <div className="text-sm md:text-xl font-bold text-[#F0B90B]">
                 {uccInfo.totalInvestmentsUSDT} USDT
               </div>
-              {/* <div className="text-xs md:text-sm text-gray-400 mb-1">
+              {/* <div className="text-sm md:text-lg text-white mb-1">
                 BNB RAISED
               </div>
               <div className="text-xs md:text-lg font-bold text-[#F0B90B]">
@@ -81,7 +81,7 @@ export default function Hero() {
               </div> */}
             </div>
             <div className="text-center">
-              <div className="text-xs md:text-sm text-gray-400 mb-">
+              <div className="text-sm md:text-lg text-white mb-">
                 LISTING DATE
               </div>
               <div className="text-xs md:text-xl font-bold">
@@ -89,14 +89,14 @@ export default function Hero() {
               </div>
             </div>
             {/* <div className="hidden text-right">
-              <div className="text-xs md:text-sm text-gray-400 mb-1">
+              <div className="text-sm md:text-lg text-white mb-1">
                 HOLDERS
               </div>
               <div className="text-xs md:text-xl font-bold text-[#F0B90B]">
                 {parseInt(uccInfo.totalUsers.toString())}
               </div>
             </div> */}
-            <div className="text-xs md:text-sm text-gray-400 mb-1 text-right">
+            <div className="text-sm md:text-lg text-white mb-1 text-right">
               BNB RAISED
               <div className="text-xs md:text-lg font-bold text-[#F0B90B]">
               {uccInfo.totalInvestmentsBNB.toFixed(4)} BNB

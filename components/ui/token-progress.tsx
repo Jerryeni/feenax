@@ -93,7 +93,7 @@ export function TokenProgress({
     <div className="space-y-6 backdrop-blur-xl bg-input  rounded-3xl p-6 md:p-8 overflow-x-auto">
       <div className="flex md:flex-row justify-between md:justify-between items-centers md:items-center gap-4">
         <div className="flex items-start gap-2 flex-col">
-          <span className="py-1 px-3 text-[8px] md:text-sm glass-card">Current price</span>
+          <span className="py-3 px-6 text-sm md:text-lg glass-card">CURRENT PRICE</span>
           <div className="flex items-center justify-center gap-1">
             <Image
               src="/images/coin.png"
@@ -102,21 +102,21 @@ export function TokenProgress({
               height={12}
               className="md:w-5 md:h-5 w-3 h-3"
             />
-            <span className="text-gray-200 md:text-sm text-[8px]">1 FNX =</span>
+            <span className="text-gray-200 md:text-2xl font-bold text-sm">1 FNX =</span>
             <div className="flex items-center gap-2">
               <img
                 src="/images/tether.svg"
                 alt="USDT"
                 className="w-5 h-5"
               />
-              <span className="text-[#F0B90B] md:text-sm text-[8px] font-semibold">
+              <span className="text-[#F0B90B] md:text-xl text-sm font-semibold">
                 {/* {formatCurrency(tokenUSDTPrice, 3)} USDT */} 0.6 USDT
               </span>
             </div>
           </div>
         </div>
         <div className="flex items-end gap-2 flex-col">
-          <span className="py-1 px-3 glass-card text-[8px] md:text-sm">Next price</span>
+          <span className="py-3 px-6 glass-card text-sm md:text-lg">NEXT PRICE</span>
           <div className="flex items-center justify-center gap-1">
             <Image
               src="/images/coin.svg"
@@ -125,14 +125,14 @@ export function TokenProgress({
               height={12}
               className="md:w-5 md:h-5 w-3 h-3"
             />
-            <span className="text-gray-200 md:text-sm text-[8px]">1 FNX =</span>
+            <span className="text-gray-200 md:text-2xl font-bold text-sm">1 FNX =</span>
             <div className="flex items-center gap-2">
               <img
                 src="/images/tether.svg"
                 alt="USDT"
                 className="w-3 h-3 md:w-5 md:h-5"
               />
-              <span className="text-[#F0B90B] md:text-sm text-[8px] font-semibold ">
+              <span className="text-[#F0B90B] md:text-xl text-sm font-semibold ">
                 0.9 USDT
               </span>
             </div>
@@ -142,8 +142,9 @@ export function TokenProgress({
         </div>
 
       </div>
-      <span className="text-[#F0B90B] text-sm font-medium animate-pulsex mx-auto">CEX Listing Price - $3</span> <br/>
-      <span className="text-muted/80 text-md font-medium text-white animate-pulsex mx-auto">50% Price Increase on Next Phase</span>
+      
+      <span className="text-[#F0B90B] text-xl font-medium animate-pulsex mx-auto">CEX Listing Price - $3</span>
+      <p className="text-muted/80 text-md font-medium text-white -mt-20 animate-pulsex mx-auto">50% Price Increase on Next Phase</p>
 
       <Progress
         value={progress}
@@ -154,7 +155,7 @@ export function TokenProgress({
       />
 
       <div className="pt-10 p-1 md:p-8">
-        <h2 className="text-sm md:text-xl mb-8 text-white ">Step 1 - <span className=" text-gray-400">
+        <h2 className="text-sm md:text-2xl mb-8 text-white ">Step 1 - <span className=" text-white">
           Select the Payment Method (BEP20)
         </span> </h2>
 
@@ -165,7 +166,7 @@ export function TokenProgress({
               // disabled
               variant={selectedToken === symbol ? "secondary" : "ghost"}
               onClick={() => setSelectedToken(symbol)}
-              className="flex bg-black/40 items-center text-white gap-1 w-full "
+              className="flex bg-black/40 items-center text-xl font-bold text-white gap-1 w-full "
             >
               <img src={details.icon} alt={symbol} className="w-6 h-6" />
               {symbol}
@@ -173,13 +174,13 @@ export function TokenProgress({
           ))}
         </div>
 
-        <h2 className="text-sm md:text-xl mb-8 text-white ">Step 2 - <span className=" text-gray-400">
-          Enter the Amount of Coin You Would Like to Purchase
+        <h2 className="text-sm md:text-2xl mb-8 text-white ">Step 2 - <span className=" text-white">
+          Enter the Amount of Coins You Would Like to Purchase
         </span> </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-1 md:gap-4">
           {selectedToken === "BNB" ? (
-            <div className="col-span-2 mb-8 rounded-full p-3 glass-card w-fit mx-auto text-center text-gray-400 text-lg md:text-xl font-semibold">
+            <div className="col-span-2 mb-8 rounded-full p-3 glass-card w-fit mx-auto text-center text-white text-lg md:text-xl font-semibold">
               Coming Soon
             </div>
           ) : (

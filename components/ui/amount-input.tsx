@@ -27,7 +27,7 @@ export function AmountInput({
       />
       <div className="absolute right-3 top-1/2 bg-black/40 text-xs p-2 rounded-full -translate-y-1/2 flex items-center gap-2">
         <img src={tokenIcon} alt={token} className="w-6 h-6" />
-        <span>{token}</span>
+        <span className="text-xl font-bold">{token}</span>
       </div>
     </div>
   );

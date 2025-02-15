@@ -31,26 +31,25 @@ export function Navbar() {
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-1 ">
               <Image src={require("../public/images/feenax.svg")} alt="refer" className=" " />
-
               <span className="text-xl font-bold">FEENAX</span>
             </Link>
           </div>
 
           <div className="hidden ">
             <div className="flex items-center space-x-8">
-              <Link href="#why-us" className="text-[#A6A9A8] hover:text-white transition-colors">
+              <Link href="#why-us" className="text-white hover:text-white transition-colors">
                 About us
               </Link>
-              <Link href="#blockchain" className="text-[#A6A9A8] hover:text-white transition-colors">
+              <Link href="#blockchain" className="text-white hover:text-white transition-colors">
                 Blockchain
               </Link>
-              <Link href="#staking" className="text-[#A6A9A8] hover:text-white transition-colors">
+              <Link href="#staking" className="text-white hover:text-white transition-colors">
                 Staking
               </Link>
-              <Link href="#tokenomics" className="text-[#A6A9A8] hover:text-white transition-colors">
+              <Link href="#tokenomics" className="text-white hover:text-white transition-colors">
                 Tokenomics
               </Link>
-              <Link href="#roadmap" className="text-[#A6A9A8] hover:text-white transition-colors">
+              <Link href="#roadmap" className="text-white hover:text-white transition-colors">
                 Roadmap
               </Link>
               <Link href="#projects" className="text-[#A6A9A8] hover:text-white transition-colors">
@@ -66,9 +65,9 @@ export function Navbar() {
             variant="secondary" 
             className=" md:inline-block bg-gradient-to-r from-[#966602] via-[#F9F400] to-[#966602] text-xs md:text-base rounded-full hover:bg-yellow-500 text-black"
           > */}
-          <Link href="https://feenax.com" className="text-[#A6A9A8] hidden md:flex items-center gap-1 md:gap-2 md:text-base text-[8px] hover:text-white transition-colors">
+          <Link href="https://feenax.com" className="text-white hidden md:flex items-center gap-1 md:gap-2 md:text-base text-[8px] hover:text-white transition-colors">
             <ArrowLeft className="w-4 h-4 text-yellow-500" />
-            Back to Home
+            Home
           </Link>
           <ConnectButton />
 
@@ -80,7 +79,7 @@ export function Navbar() {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-[#A6A9A8] hover:text-white focus:outline-none"
+              className="text-white hover:text-white focus:outline-none"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -95,8 +94,8 @@ export function Navbar() {
             className="md:hidden mt-2"
           >
             <div className="flex flex-col space-y-4">
-              <Link href="https://feenax.com" className="text-[#A6A9A8] hover:text-white transition-colors">
-                Back to Home
+              <Link href="https://feenax.com" className="text-white hover:text-white transition-colors">
+                Home
               </Link>
 
               {/* <Button 
