@@ -102,14 +102,14 @@ export function TokenProgress({
               height={12}
               className="md:w-5 md:h-5 w-3 h-3"
             />
-            <span className="text-gray-200 md:text-2xl font-bold text-sm">1 FNX =</span>
+            <span className="text-gray-200 md:text-2xl font-bold text-xs">1 FNX =</span>
             <div className="flex items-center gap-2">
               <img
                 src="/images/tether.svg"
                 alt="USDT"
                 className="w-5 h-5"
               />
-              <span className="text-[#F0B90B] md:text-xl text-sm font-semibold">
+              <span className="text-[#F0B90B] md:text-xl text-xs font-semibold">
                 {/* {formatCurrency(tokenUSDTPrice, 3)} USDT */} 0.6 USDT
               </span>
             </div>
@@ -125,26 +125,28 @@ export function TokenProgress({
               height={12}
               className="md:w-5 md:h-5 w-3 h-3"
             />
-            <span className="text-gray-200 md:text-2xl font-bold text-sm">1 FNX =</span>
+            <span className="text-gray-200 md:text-2xl font-bold text-xs">1 FNX =</span>
             <div className="flex items-center gap-2">
               <img
                 src="/images/tether.svg"
                 alt="USDT"
                 className="w-3 h-3 md:w-5 md:h-5"
               />
-              <span className="text-[#F0B90B] md:text-xl text-sm font-semibold ">
+              <span className="text-[#F0B90B] md:text-xl text-xs font-semibold ">
                 0.9 USDT
               </span>
             </div>
           </div>
-          
+
 
         </div>
 
       </div>
-      
-      <span className="text-[#F0B90B] text-xl font-medium animate-pulsex mx-auto">CEX Listing Price - $3</span>
-      <p className="text-muted/80 text-md font-medium text-white -mt-20 animate-pulsex mx-auto">50% Price Increase on Next Phase</p>
+
+      <div className="">
+        <p className="text-[#F0B90B] text-sm md:text-xl font-medium animate-pulsex mx-auto mt-4">CEX Listing Price - $3</p>
+        <p className="text-muted/80 text-md font-medium text-white animate-pulsex mx-auto">50% Price Increase on Next Phase</p>
+      </div>
 
       <Progress
         value={progress}
