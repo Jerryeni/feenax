@@ -29,8 +29,10 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 backdrop-blur-xl border border-yellow-600/10 bg-yellow-700/10 m-3 rounded-full">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
-            <Link href="/" className="flex items-center space-x-2">
-              <Image src={require("../public/images/feenax-logo.svg")} alt="Feenax Logo" className="w-20 h-20" />
+            <Link href="/" className="flex items-center space-x-1 ">
+              <Image src={require("../public/images/feenax.svg")} alt="refer" className=" " />
+
+              <span className="text-xl font-bold">FEENAX</span>
             </Link>
           </div>
 
@@ -64,10 +66,10 @@ export function Navbar() {
             variant="secondary" 
             className=" md:inline-block bg-gradient-to-r from-[#966602] via-[#F9F400] to-[#966602] text-xs md:text-base rounded-full hover:bg-yellow-500 text-black"
           > */}
-            <Link href="https://feenax.com" className="text-[#A6A9A8] hidden md:flex items-center gap-1 md:gap-2 md:text-base text-[8px] hover:text-white transition-colors">
+          <Link href="https://feenax.com" className="text-[#A6A9A8] hidden md:flex items-center gap-1 md:gap-2 md:text-base text-[8px] hover:text-white transition-colors">
             <ArrowLeft className="w-4 h-4 text-yellow-500" />
             Back to Home
-            </Link>
+          </Link>
           <ConnectButton />
 
 

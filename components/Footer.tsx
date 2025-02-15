@@ -14,15 +14,17 @@ export function Footer() {
   return (
     <footer className="relative pt-20 pb-10x bg-black/40 border-t border-white/10">
       <div className="max-w-6xl mx-auto px-4 relative">
-        {/* Early Bird Section */}
-      
+       
+        <Image src={require("../public/images/bg.svg")} alt="refer" className="absolute top-0 h-96 w-full" />
+
+
         {/* Footer Content */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 pb-10 mt-20">
           <div>
-            <Link href="/" className="flex items-center space-x-2 ">
-            <Image src={require("../public/images/feenax-logo.svg")} alt="refer" className=" " />
+            <Link href="/" className="flex items-center space-x-1 ">
+            <Image src={require("../public/images/feenax.svg")} alt="refer" className=" " />
 
-              {/* <span className="text-xl font-bold">Feenax</span> */}
+              <span className="text-xl font-bold">FEENAX</span>
             </Link>
             <p className="text-gray-400 text-sm">
               © 2025 Feenax Network. All rights reserved.
@@ -30,11 +32,26 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="font-semibold mb-4">Quick Links</h3>
+            <h3 className="font-semibold mb-4">Feenax</h3>
             <ul className="space-y-2 text-gray-400">
               <li>
                 <Link href="#why-us" className="hover:text-yellow-500 transition-colors">
                   About Feenax
+                </Link>
+              </li>
+              <li>
+                <Link href="#blockchain" className="hover:text-yellow-500 transition-colors">
+                  Blockchain
+                </Link>
+              </li>
+              <li>
+                <Link href="#projects" className="hover:text-yellow-500 transition-colors">
+                  Projects
+                </Link>
+              </li>
+              <li>
+                <Link href="#staking" className="hover:text-yellow-500 transition-colors">
+                  Staking
                 </Link>
               </li>
               <li>
@@ -45,6 +62,12 @@ export function Footer() {
               <li>
                 <Link href="#roadmap" className="hover:text-yellow-500 transition-colors">
                   Roadmap
+                </Link>
+              </li>
+
+              <li>
+                <Link href="#rewards" className="hover:text-yellow-500 transition-colors">
+                  Rewards
                 </Link>
               </li>
             </ul>
@@ -59,13 +82,34 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="#faqs" className="hover:text-yellow-500 transition-colors">
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link href="#faqs" className="hover:text-yellow-500 transition-colors">
+                  Wiki
+                </Link>
+              </li>
+              <li>
+                <Link href="#faqs" className="hover:text-yellow-500 transition-colors">
+                  Whitepaper
+                </Link>
+              </li>
+
+              <li>
                 <Link href="#" className="hover:text-yellow-500 transition-colors">
-                  Documentation
+                  Privacy Policy
                 </Link>
               </li>
               <li>
                 <Link href="#" className="hover:text-yellow-500 transition-colors">
-                  Privacy Policy
+                  Cookie Policy
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className="hover:text-yellow-500 transition-colors">
+                  Terms of Service
                 </Link>
               </li>
             </ul>
@@ -73,46 +117,82 @@ export function Footer() {
 
           <div>
             <h3 className="font-semibold mb-4">Socials</h3>
-            <div className="flex space-x-4">
-              <Link title="X account"
+            <div className="grid grid-cols-2 w-full justify-start gap-6">
+              <Link
                 href="https://x.com/Feenaxcoin"
-                className="w-10 h-10 rounded-full bg-white/5 hover:bg-white/10 transition-colors flex items-center justify-center"
+                className=" rounded-full  transition-colors flex gap-4 items-center justify-start"
               >
-                X
-                {/* <Twitter className="w-5 h-5" /> */}
+
+                <Image src={require("../public/x.svg")} alt="refer" className="w-5 h-5 bg-white rounded-full p-1" />
+                <p className=" text-muted/80">X</p>
               </Link>
-              <Link title="Telegram"
+              <Link
                 href="https://t.me/feenaxcoin"
-                className="w-10 h-10 rounded-full bg-white/5 hover:bg-white/10 transition-colors flex items-center justify-center"
+                className=" rounded-full  transition-colors flex gap-4 items-center justify-start"
               >
-                <Send className="w-5 h-5" />
+                <Send className="w-5 h-5 text-blue-400" />
+                <p className="text-sm text-muted/80">Telegram</p>
               </Link>
-              <Link title="Facebook"
-                href="https://www.facebook.com/feenaxcoin/"
-                className="w-10 h-10 rounded-full bg-white/5 hover:bg-white/10 transition-colors flex items-center justify-center"
+              <Link
+                href="https://t.me/feenaxcommunity"
+                className=" rounded-full  transition-colors flex gap-4 items-center justify-start"
               >
-                <Facebook className="w-5 h-5" />
+                <Send className="w-5 h-5 text-blue-400" />
+                <p className="text-sm text-muted/80 ">Chat</p>
+
               </Link>
-              <Link title="Instagram"
+              <Link
                 href="https://www.instagram.com/feenaxcoin/"
-                className="w-10 h-10 rounded-full bg-white/5 hover:bg-white/10 transition-colors flex items-center justify-center"
+                className=" rounded-full  transition-colors flex gap-4 items-center justify-start"
               >
-                <Instagram className="w-5 h-5" />
+                <Instagram className="w-5 h-5 text-red-400 " />
+                <p className="text-sm text-muted/80">Instagram</p>
+
               </Link>
-              <Link title="Youtube"
+              <Link
+                href="https://www.facebook.com/feenaxcoin/"
+                className=" rounded-full  transition-colors flex gap-4 items-center justify-start"
+              >
+                <Facebook className="w-5 h-5 text-blue-500" />
+                <p className="text-sm text-muted/80">Facebook</p>
+
+              </Link>
+
+              <Link
                 href="https://www.youtube.com/@Feenax"
-                className="w-10 h-10 rounded-full bg-white/5 hover:bg-white/10 transition-colors flex items-center justify-center"
+                className=" rounded-full  transition-colors flex gap-4 items-center justify-start"
               >
                 <Youtube className="w-5 h-5" />
+                <p className="text-sm text-muted/80">YouTube</p>
+
               </Link>
-              <Link 
-                href="https://discord.gg/BH5dXeDm" title="Discord"
-                className="w-10 h-10 rounded-full bg-white/5 hover:bg-white/10 transition-colors flex items-center justify-center"
+              <Link
+                href="https://discord.gg/MPShvQyb"
+                className=" rounded-full  transition-colors flex gap-4 items-center justify-start"
               >
-                <SmilePlus className="w-5 h-5" />
+                <Image src={require("../public/discord.svg")} alt="refer" className="w-5 h-5" />
+                <p className="text-sm text-muted/80">Discord</p>
+
+              </Link>
+              <Link
+                href="https://medium.com/@feenaxcoin"
+                className=" rounded-full  transition-colors flex gap-4 items-center justify-start"
+              >
+                <Image src={require("../public/medium.svg")} alt="refer" className="w-5 h-5 text-white bg-white rounded-full p-1" />
+                <p className="text-sm text-muted/80">Medium</p>
+
+              </Link>
+              <Link
+                href="https://coinmarketcap.com/community/profile/Feenaxcoin/"
+                className=" rounded-full  transition-colors flex gap-4 items-center justify-start"
+              >
+                <Image src={require("../public/coinmarketcap.png")} alt="refer" className="w-5 h-5 text-white bg-white rounded-full p-1" />
+                <p className="text-sm text-muted/80">Coin market</p>
+
               </Link>
             </div>
           </div>
+
         </div>
 
         {/* Back to Top Button */}

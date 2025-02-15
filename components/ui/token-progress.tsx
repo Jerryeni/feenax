@@ -90,7 +90,7 @@ export function TokenProgress({
   };
 
   return (
-    <div className="space-y-6 backdrop-blur-xl gradient-card rounded-3xl p-6 md:p-8 overflow-x-auto">
+    <div className="space-y-6 backdrop-blur-xl bg-input  rounded-3xl p-6 md:p-8 overflow-x-auto">
       <div className="flex md:flex-row justify-between md:justify-between items-centers md:items-center gap-4">
         <div className="flex items-start gap-2 flex-col">
           <span className="py-1 px-3 text-[8px] md:text-sm glass-card">Current price</span>
@@ -110,7 +110,7 @@ export function TokenProgress({
                 className="w-5 h-5"
               />
               <span className="text-[#F0B90B] md:text-sm text-[8px] font-semibold">
-                {formatCurrency(tokenUSDTPrice, 3)} USDT
+                {/* {formatCurrency(tokenUSDTPrice, 3)} USDT */} 0.6 USDT
               </span>
             </div>
           </div>
@@ -133,7 +133,7 @@ export function TokenProgress({
                 className="w-3 h-3 md:w-5 md:h-5"
               />
               <span className="text-[#F0B90B] md:text-sm text-[8px] font-semibold ">
-                0.6 USDT
+                0.9 USDT
               </span>
             </div>
           </div>
@@ -142,7 +142,8 @@ export function TokenProgress({
         </div>
 
       </div>
-      <span className="text-muted/80 text-xl font-medium text-white animate-pulsex mx-auto">20% Price Increase on Next Phase</span>
+      <span className="text-[#F0B90B] text-sm font-medium animate-pulsex mx-auto">CEX Listing Price - $3</span> <br/>
+      <span className="text-muted/80 text-md font-medium text-white animate-pulsex mx-auto">50% Price Increase on Next Phase</span>
 
       <Progress
         value={progress}

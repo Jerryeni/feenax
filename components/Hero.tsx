@@ -38,14 +38,14 @@ export default function Hero() {
 
   const { uccInfo, userUCCInfo, totalTokens } = usePresale();
 
-  useEffect(() => {
-    const targetDate = new Date("2024-12-31T00:00:00");
-    const timer = setInterval(() => {
-      setTimeLeft(calculateTimeLeft(targetDate));
-    }, 1000);
+  // useEffect(() => {
+  //   const targetDate = new Date("2024-12-31T00:00:00");
+  //   const timer = setInterval(() => {
+  //     setTimeLeft(calculateTimeLeft(targetDate));
+  //   }, 1000);
 
-    return () => clearInterval(timer);
-  }, []);
+  //   return () => clearInterval(timer);
+  // }, []);
 
   // console.log(userUCCInfo.usersInfo[3])
   return (
@@ -59,7 +59,7 @@ export default function Hero() {
         <PhaseIndicator currentPhase={1} totalPhases={10} />
         <p className="md:text-md text-xs text-gray-400 mb-12">ENDS IN</p>
 
-        <CountdownTimer targetDate={new Date("2025-02-19")} />
+        <CountdownTimer targetDate={new Date("2025-03-15T18:29:59Z")} />
 
         {/* Stats Bar */}
         <div className="w-full mt-24 max-w-4xl mx-auto backdrop-blur-xl bg-black/40 rounded-3xl border border-[#F0B90B]/20 overflow-hidden">
@@ -118,10 +118,10 @@ export default function Hero() {
               userTokens={userUCCInfo.usersInfo?.[7] ?? 0}
               progress={
                 uccInfo.totalTokensToBEDistributed &&
-                (uccInfo.totalTokensToBEDistributed * 100) / 50000
+                (uccInfo.totalTokensToBEDistributed * 100) / 60000
               }
               tokensSold={uccInfo.totalTokensToBEDistributed}
-              totalTokens={50000}
+              totalTokens={60000}
               activities={userUCCInfo.recentActivities}
               activitiesLength={userUCCInfo.activityLength}
             />
