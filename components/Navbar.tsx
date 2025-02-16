@@ -5,12 +5,13 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { ArrowLeft, Menu, X } from "lucide-react";
+import { ArrowLeft, HomeIcon, Layers, Menu, X } from "lucide-react";
 import { shortenAddress } from "@/lib/utils";
 import { usePresale } from "@/providers/provider";
 
 import { useAccount } from "wagmi";
-import { ConnectButton } from "@rainbow-me/rainbowkit";
+import { ConnectButtonWrapper } from "./ui/ConnetButton";
+// import { ConnectButton } from "@rainbow-me/rainbowkit";
 // import { ConnectButton } from "@rainbow-me/rainbowkit";
 
 
@@ -29,7 +30,7 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 backdrop-blur-xl border border-yellow-600/10 bg-yellow-700/10 m-3 rounded-full">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
-            <Link href="/" className="flex items-center space-x-1 ">
+            <Link href="https://feenax.com" className="flex items-center space-x-1 ">
               <Image src={require("../public/images/feenax.svg")} alt="refer" className=" " />
               <span className="text-xl font-bold">FEENAX</span>
             </Link>
@@ -65,11 +66,19 @@ export function Navbar() {
             variant="secondary" 
             className=" md:inline-block bg-gradient-to-r from-[#966602] via-[#F9F400] to-[#966602] text-xs md:text-base rounded-full hover:bg-yellow-500 text-black"
           > */}
-          <Link href="https://feenax.com" className="text-white hidden md:flex items-center gap-1 md:gap-2 md:text-base text-[8px] hover:text-white transition-colors">
-            <ArrowLeft className="w-4 h-4 text-yellow-500" />
-            Home
-          </Link>
-          <ConnectButton />
+          <div className="flex justify-between items-center gap-12">
+            <Link href="https://feenax.com" className="text-white font-medium hover:text-yellow-500 transition-colors flex gap-2 items-center">
+              {/* <ArrowLeft className="w-4 h-4 text-yellow-500" /> */}
+              <HomeIcon className="w-4 h-4 text-yellow-500" />
+              Home
+            </Link>
+            <Link href="/Whitepaper.pdf" target="_blank" rel="noopener noreferrer" className="text-white font-medium hover:text-yellow-500  flex gap-2 items-center transition-colors">
+              <Layers className="w-4 h-4 text-yellow-500" />
+              Whitepaper
+            </Link>
+          </div>
+
+          <ConnectButtonWrapper />
 
 
           {/* <ConnectButton /> */}
@@ -94,7 +103,8 @@ export function Navbar() {
             className="md:hidden mt-2"
           >
             <div className="flex flex-col space-y-4">
-              <Link href="https://feenax.com" className="text-white hover:text-white transition-colors">
+              <Link href="https://feenax.com" className="text-white hover:text-white transition-colors flex gap-2">
+                <HomeIcon className="w-4 h-4 text-yellow-500" />
                 Home
               </Link>
 
@@ -102,7 +112,7 @@ export function Navbar() {
                 variant="secondary" 
                 className="bg-gradient-to-r from-[#966602] via-[#F9F400] to-[#966602] rounded-full hover:bg-yellow-500 text-black w-full"
               > */}
-              <ConnectButton />
+              <ConnectButtonWrapper />
 
               {/* </Button> */}
             </div>

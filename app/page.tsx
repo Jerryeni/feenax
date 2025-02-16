@@ -12,6 +12,7 @@ import { Footer } from "@/components/Footer";
 import { FeenaxProjects } from "@/components/FeenaxProject";
 import Hero from "@/components/Hero";
 import Steps from "@/components/Steps";
+import { PriceProgression } from "@/components/PriceProgrssion";
 // import { Steps } from "@/components/Steps";
 
 export default function Home() {
@@ -22,6 +23,8 @@ export default function Home() {
       <Hero />
       <Features />
       <Steps />
+      <PriceProgression />
+
       {/* <WhyFeenax />
       <Blockchain />
       <Staking />

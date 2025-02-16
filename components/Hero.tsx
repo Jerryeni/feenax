@@ -118,10 +118,10 @@ export default function Hero() {
               userTokens={userUCCInfo.usersInfo?.[7] ?? 0}
               progress={
                 uccInfo.totalTokensToBEDistributed &&
-                (uccInfo.totalTokensToBEDistributed * 100) / 60000
+                (uccInfo.totalTokensToBEDistributed * 100) / 100000
               }
               tokensSold={uccInfo.totalTokensToBEDistributed}
-              totalTokens={60000}
+              totalTokens={100000}
               activities={userUCCInfo.recentActivities}
               activitiesLength={userUCCInfo.activityLength}
             />
