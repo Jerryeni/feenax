@@ -70,10 +70,10 @@ export function Features() {
         >
           {/* <Image width={100} height={100} src="/images/bg3.png" alt="" className="w-[90%] animate-pulse mx-auto" /> */}
           <div className="pt-20 max-w-7xl mx-auto px-4 hidden md:block">
-          <Image src="/images/fbanner3.jpg" alt="Feenax" width={100} height={100} className="absolutex top-4x w-full animate-pulsex" />
+          <Image src="/fbanner.jpg" alt="Feenax" width={100} height={100} className="absolutex top-4x w-full animate-pulsex" />
         </div>
         <div className="pt-20 max-w-7xl mx-auto px-4 md:hidden">
-          <Image src="/images/fbanner2.jpg" alt="Feenax" width={100} height={100} className="absolutex top-4x w-full animate-pulsex" />
+          <Image src="/fbanner2.jpg" alt="Feenax" width={100} height={100} className="absolutex top-4x w-full animate-pulsex" />
         </div>
 
         </motion.div>

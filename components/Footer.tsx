@@ -13,9 +13,9 @@ export function Footer() {
 
   return (
     <footer className="relative pt-20 pb-10x bg-black/40 border-t border-white/10">
-      <div className="max-w-6xl mx-auto px-4 relative">
+      <div className="max-w-6xl mx-auto px-4">
        
-        <Image src={require("../public/images/bg.svg")} alt="refer" className="absolute top-32 h-96 w-full" />
+        {/* <Image src={require("../public/images/bg.svg")} alt="refer" className="absolute top-32x h-96 w-full -z-10" /> */}
 
 
         {/* Footer Content */}
