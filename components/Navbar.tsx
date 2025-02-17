@@ -32,7 +32,7 @@ export function Navbar() {
           <div className="flex items-center">
             <Link href="https://feenax.com" className="flex items-center space-x-1 ">
               <Image src={require("../public/images/feenax.svg")} alt="refer" className=" " />
-              <span className="text-xl font-bold">FEENAX</span>
+              <span className="text-xl font-bold md:block hidden">FEENAX</span>
             </Link>
           </div>
 
@@ -66,14 +66,14 @@ export function Navbar() {
             variant="secondary" 
             className=" md:inline-block bg-gradient-to-r from-[#966602] via-[#F9F400] to-[#966602] text-xs md:text-base rounded-full hover:bg-yellow-500 text-black"
           > */}
-          <div className="flex justify-between items-center gap-12">
-            <Link href="https://feenax.com" className="text-white font-medium hover:text-yellow-500 transition-colors flex gap-2 items-center">
+          <div className="flex md:flex justify-between items-center gap-2 md:gap-12">
+            <Link href="https://feenax.com" className="text-white md:text-base text-xs font-medium hover:text-yellow-500 transition-colors flex md:gap-2 gap-1 items-center">
               {/* <ArrowLeft className="w-4 h-4 text-yellow-500" /> */}
-              <HomeIcon className="w-4 h-4 text-yellow-500" />
+              <HomeIcon className="md:w-4 md:h-4 w-2 h-2 text-yellow-500 " />
               Home
             </Link>
-            <Link href="/Whitepaper.pdf" target="_blank" rel="noopener noreferrer" className="text-white font-medium hover:text-yellow-500  flex gap-2 items-center transition-colors">
-              <Layers className="w-4 h-4 text-yellow-500" />
+            <Link href="/Whitepaper.pdf" target="_blank" rel="noopener noreferrer" className="text-white font-medium md:text-base text-xs hover:text-yellow-500  flex gap-2 items-center transition-colors">
+              <Layers className="md:w-4 md:h-4 w-2 h-2 text-yellow-500" />
               Whitepaper
             </Link>
           </div>
@@ -106,6 +106,10 @@ export function Navbar() {
               <Link href="https://feenax.com" className="text-white hover:text-white transition-colors flex gap-2">
                 <HomeIcon className="w-4 h-4 text-yellow-500" />
                 Home
+              </Link>
+              <Link href="/Whitepaper.pdf" target="_blank" rel="noopener noreferrer" className="text-white font-medium hover:text-yellow-500  flex gap-2 items-center transition-colors">
+                <Layers className="w-4 h-4 text-yellow-500" />
+                Whitepaper
               </Link>
 
               {/* <Button 

@@ -255,7 +255,7 @@ export default function HowToBuy() {
                 className="bg-[#1a1a1a] hover:bg-[#252525] transition-colors rounded-lg p-4 flex items-center justify-center border border-[#F0B90B]/20"
               >
                 <Send className="w-5 h-5 text-blue-400" />
-                <span className="text-blue-400 font-semibold">Join our Telegram Community Chat</span>
+                <span className="text-blue-400 font-semibold text-sm">Join our Telegram Community Chat</span>
               </Link>
             </div>
           </div>

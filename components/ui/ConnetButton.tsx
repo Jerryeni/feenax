@@ -21,7 +21,7 @@ export const ConnectButtonWrapper = () => {
           (!authenticationStatus ||
             authenticationStatus === 'authenticated');
         return (
-          <div className="gradient-btn text-black rounded-full py-2 px-8"
+          <div className=" text-black rounded-full"
             {...(!ready && {
               'aria-hidden': true,
               'style': {
@@ -34,7 +34,7 @@ export const ConnectButtonWrapper = () => {
             {(() => {
               if (!connected) {
                 return (
-                  <button className="gradient-btn py-2 px-8 text-black text-lg font-medium" onClick={openConnectModal} type="button">
+                  <button className="gradient-btn py-2 px-8 text-black text-[8px] md:text-lg font-medium" onClick={openConnectModal} type="button">
                     Connect Wallet
                   </button>
                 );
@@ -47,11 +47,12 @@ export const ConnectButtonWrapper = () => {
                 );
               }
               return (
-                <div style={{ display: 'flex', gap: 12 }}>
+                <div style={{ display: 'flex', gap: 12 }} className='bg-yellow-500 rounded-full py-2 px-3 md:py-2 md:px-8 text-black text-[8px] md:text-lg font-medium'>
                   <button
                     onClick={openChainModal}
                     style={{ display: 'flex', alignItems: 'center' }}
                     type="button"
+                    
                   >
                     {chain.hasIcon && (
                       <div

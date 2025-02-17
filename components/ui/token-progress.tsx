@@ -93,7 +93,7 @@ export function TokenProgress({
     <div className="space-y-6 backdrop-blur-xl bg-input  rounded-3xl p-6 md:p-8 overflow-x-auto">
       <div className="flex md:flex-row justify-between md:justify-between items-centers md:items-center gap-4">
         <div className="flex items-start gap-2 flex-col">
-          <span className="py-3 px-6 text-sm md:text-lg glass-card">CURRENT PRICE</span>
+          <span className="md:py-3 md:px-6 px-3 py-2 text-sm md:text-lg glass-card">CURRENT PRICE</span>
           <div className="flex items-center justify-center gap-1">
             <Image
               src="/images/coin.png"
@@ -116,7 +116,7 @@ export function TokenProgress({
           </div>
         </div>
         <div className="flex items-end gap-2 flex-col">
-          <span className="py-3 px-6 glass-card text-sm md:text-lg">NEXT PRICE</span>
+          <span className="md:py-3 md:px-6 px-3 py-2 glass-card text-sm md:text-lg ">NEXT PRICE</span>
           <div className="flex items-center justify-center gap-1">
             <Image
               src="/images/coin.svg"
