@@ -13,6 +13,7 @@ import { FeenaxProjects } from "@/components/FeenaxProject";
 import Hero from "@/components/Hero";
 import Steps from "@/components/Steps";
 import { PriceProgression } from "@/components/PriceProgrssion";
+import ClaimFeenaxWallet from "@/components/WalletPromo";
 // import { Steps } from "@/components/Steps";
 
 export default function Home() {
@@ -22,6 +23,7 @@ export default function Home() {
       {/* <SeedSale /> */}
       <Hero />
       <Features />
+      <ClaimFeenaxWallet />
       <Steps />
       <PriceProgression />
 

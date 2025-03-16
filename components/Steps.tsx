@@ -234,6 +234,7 @@ export default function HowToBuy() {
                 <p className="text-gray-300">
                   Share your Link to Earn Additional Rewards through Feenax's Affiliate Program.
                 </p>
+                <p>Get 25% in Rewards for every successful Referral</p>
                
               </div>
             </div>

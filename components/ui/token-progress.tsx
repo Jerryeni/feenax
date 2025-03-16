@@ -45,30 +45,17 @@ export function TokenProgress({
   activities,
   activitiesLength,
 }: TokenProgressProps) {
-  // const progress = (tokensSold / totalTokens) * 100;
   const [selectedToken, setSelectedToken] = useState("USDT");
   const [amount, setAmount] = useState("");
   const { status, buyWithUSDT, buyWithBNB } = usePresale();
   const [showActivities, setShowActivities] = useState(false);
-  // console.log(status);
+
   const handleAmountChange = (value: string) => {
     if (value === "" || /^\d*\.?\d*$/.test(value)) {
       setAmount(value);
     }
   };
-  // console.log(  `{tokenUSDTPrice}: ${tokenUSDTPrice},
-  //   {tokenBNBPrice}: ${tokenBNBPrice},
-  //   {tokensSold}: ${tokensSold},
-  //   {totalTokens}: ${totalTokens},
-  //   {userId}: ${userId},kenUSDTPrice}: 0,
-  //   {userDepositsUSDT}: ${userDepositsUSDT},
-  //   {userDepositsBNB}: ${userDepositsBNB},
-  //   {progress}: ${progress},
-  //   {userEarningsBNB}: ${userEarningsBNB},
-  //   {userEarningsUSDT}: ${userEarningsUSDT},
-  //   {userTokens}: ${userTokens},
-  //   {activities}: ${activities},
-  //   {activitiesLength}: ${activitiesLength}`);
+
   const calculateTokenAmount = useCallback(
     (inputAmount: string) => {
       const numAmount = parseFloat(inputAmount) || 0;
@@ -90,63 +77,36 @@ export function TokenProgress({
   };
 
   return (
-    <div className="space-y-6 backdrop-blur-xl bg-input  rounded-3xl p-6 md:p-8 overflow-x-auto">
-      <div className="flex md:flex-row justify-between md:justify-between items-centers md:items-center gap-4">
+    <div className="space-y-6 backdrop-blur-xl bg-input rounded-3xl p-6 md:p-8 overflow-x-auto">
+      <div className="flex md:flex-row justify-between items-center gap-4">
         <div className="flex items-start gap-2 flex-col">
           <span className="md:py-3 md:px-6 px-3 py-2 text-sm md:text-lg glass-card">CURRENT PRICE</span>
           <div className="flex items-center justify-center gap-1">
-            <Image
-              src="/images/coin.png"
-              alt="fnx-logo"
-              width={12}
-              height={12}
-              className="md:w-5 md:h-5 w-3 h-3"
-            />
+            <Image src="/images/coin.png" alt="fnx-logo" width={12} height={12} className="md:w-5 md:h-5 w-3 h-3" />
             <span className="text-gray-200 md:text-2xl font-bold text-xs">1 FNX =</span>
             <div className="flex items-center gap-2">
-              <img
-                src="/images/tether.svg"
-                alt="USDT"
-                className="w-5 h-5"
-              />
-              <span className="text-[#F0B90B] md:text-xl text-xs font-semibold">
-                {/* {formatCurrency(tokenUSDTPrice, 3)} USDT */} 0.6 USDT
-              </span>
+              <img src="/images/tether.svg" alt="USDT" className="w-5 h-5" />
+              <span className="text-[#F0B90B] md:text-xl text-xs font-semibold">0.6 USDT</span>
             </div>
           </div>
         </div>
         <div className="flex items-end gap-2 flex-col">
           <span className="md:py-3 md:px-6 px-3 py-2 glass-card text-sm md:text-lg ">NEXT PRICE</span>
           <div className="flex items-center justify-center gap-1">
-            <Image
-              src="/images/coin.svg"
-              alt="fnx-logo"
-              width={12}
-              height={12}
-              className="md:w-5 md:h-5 w-3 h-3"
-            />
+            <Image src="/images/coin.svg" alt="fnx-logo" width={12} height={12} className="md:w-5 md:h-5 w-3 h-3" />
             <span className="text-gray-200 md:text-2xl font-bold text-xs">1 FNX =</span>
             <div className="flex items-center gap-2">
-              <img
-                src="/images/tether.svg"
-                alt="USDT"
-                className="w-3 h-3 md:w-5 md:h-5"
-              />
-              <span className="text-[#F0B90B] md:text-xl text-xs font-semibold ">
-                0.9 USDT
-              </span>
+              <img src="/images/tether.svg" alt="USDT" className="w-3 h-3 md:w-5 md:h-5" />
+              <span className="text-[#F0B90B] md:text-xl text-xs font-semibold ">0.9 USDT</span>
             </div>
           </div>
-
-
         </div>
-
       </div>
 
       <div className="">
-        <p className="text-[#F0B90B] text-sm md:text-xl font-medium animate-pulsex mx-auto mt-4">CEX Listing Price - $3</p>
-        <p className="text-muted/80 text-md font-medium text-white animate-pulsex mx-auto">50% Price Increase on Next Phase</p>
-      </div>
+          <p className="text-[#F0B90B] text-sm md:text-xl font-medium animate-pulsex mx-auto mt-4">CEX LISTING PRICE - <span className="font-bold"> $3 </span></p>
+          <p className="text-muted/80 text-md font-medium text-white animate-pulsex mx-auto">50% Price Increase on Next Phase</p>
+        </div>
 
       <Progress
         value={progress}
@@ -157,31 +117,26 @@ export function TokenProgress({
       />
 
       <div className="pt-10 p-1 md:p-8">
-        <h2 className="text-sm md:text-2xl mb-8 text-white ">Step 1 - <span className=" text-white">
-          Select the Payment Method (BEP20)
-        </span> </h2>
+        <h2 className="text-sm md:text-2xl mb-8 text-white">Step 1 - <span className="text-white">Select the Payment Method</span></h2>
 
-        <div className="flex w-full md:w-[40%] gradient-card mx-auto items-center justify-center p-1 bg-cardx glass-card gap-4 mb-8">
+        <div className="flex w-full md:w-full overflow-x-auto gradient-card mx-auto items-center justify-center p-1 bg-cardx glass-card gap-1 mb-8">
           {Object.entries(SUPPORTED_TOKENS).map(([symbol, details]) => (
             <Button
               key={symbol}
-              // disabled
               variant={selectedToken === symbol ? "secondary" : "ghost"}
               onClick={() => setSelectedToken(symbol)}
-              className="flex bg-black/40 items-center text-xl font-bold text-white gap-1 w-full "
+              className={`flex items-center text-sm md:text-xl font-bold text-white gap-1 w-full ${selectedToken === symbol ? "bg-[#F0B90B] text-black" : "bg-black/40"}`}
             >
-              <img src={details.icon} alt={symbol} className="w-6 h-6" />
+              <img src={details.icon} alt={symbol} className="md:w-6 w-4 h-4 md:h-6" />
               {symbol}
             </Button>
           ))}
         </div>
 
-        <h2 className="text-sm md:text-2xl mb-8 text-white ">Step 2 - <span className=" text-white">
-          Enter the Amount of Coins You Would Like to Purchase
-        </span> </h2>
+        <h2 className="text-sm md:text-2xl mb-8 text-white">Step 2 - <span className="text-white">Enter the Amount of Coins You Would Like to Purchase</span></h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-1 md:gap-4">
-          {selectedToken === "BNB" ? (
+          {selectedToken !== "USDT" ? (
             <div className="col-span-2 mb-8 rounded-full p-3 glass-card w-fit mx-auto text-center text-white text-lg md:text-xl font-semibold">
               Coming Soon
             </div>
@@ -204,10 +159,12 @@ export function TokenProgress({
           )}
         </div>
 
+        
+
         <PurchaseButton
           status={status}
           onClick={handlePurchase}
-          disabled={!amount || parseFloat(amount) <= 0 || status == "APPROVING" || status == "APPROVED" || status == "PURCHASING"}
+          disabled={!amount || parseFloat(amount) <= 0 || status === "APPROVING" || status === "APPROVED" || status === "PURCHASING"}
         />
       </div>
 

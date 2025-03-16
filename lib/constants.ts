@@ -2,7 +2,9 @@ import { ICO_CONFIG } from './config/ico';
 
 export const SUPPORTED_TOKENS: Record<string, { name: string; icon: string }> = {
   USDT: { name: 'USDT', icon: '/images/tether.svg' },
+  USDC: { name: 'USDC', icon: '/usdc.webp' },
   BNB: { name: 'BNB', icon: '/images/bnb.svg' },
+  BTC: { name: 'BTC', icon: '/btc2.png' },
 };
 
 export const TECH_PARTNERS = [
